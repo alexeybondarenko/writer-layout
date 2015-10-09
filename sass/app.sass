@@ -14,6 +14,8 @@
 =f-serif-headers
   font-family: 'Helvetica Neue', Geneva, Helvetica
   font-weight: 200
+=f
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 $border-color: #e3e3e3
 $text-light-color: #ccc
@@ -24,7 +26,9 @@ $padding: 15px 30px
 body
   margin: 0
   padding: 0
-  font: 200 13px/160% 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 200
+  font-size: 13px
+  line-height: 160%
 
   min-width: 768px
   background-color: #223654
@@ -46,17 +50,20 @@ a
   display: block
   margin: 0
   padding: 0
+  font-size: 14px
   &.list--sections
     +f-serif
+    font-size: 15px
 
   li
     display: block
-    font-size: 14px
     padding: 8px 0
     //line-height: 30px
     &.is-active
       font-weight: bold
       text-decoration: underline
+    &.is-private
+      opacity: .9
 
 .main, .wrap
   height: 100%
@@ -155,15 +162,18 @@ a
 
 .col:nth-child(2n)
 
-  border-width: 0 1px
+  border-width: 0 0 0 1px
   border-style: solid
   border-color: $border-color
 
 .comments-block
-  margin-top: 20px
-
+  +f
+  font-size: 13px
+  position: relative
+  width: 100%
+  height: 100%
   .comments-block__header
-    padding-bottom: 10px
+    //padding-bottom: 10px
     a
       display: inline-block
       vertical-align: middle
@@ -179,8 +189,12 @@ a
       margin-left: 10px
       white-space: nowrap
       color: $text-light-color
+  .comments-block__text
+    text-overflow: ellipsis
+    
   .comments-block__created-at
-    margin-top: 10px
+    //margin-top: 10px
+    width: 100%
     font-size: 12px
     color: $text-light-color
 
@@ -190,12 +204,30 @@ a
 
   line-height: 25px
   color: #3b3b3b
-  p
+
+
+  $section-content-comment-width: 300px
+  $section-content-comment-offset: 80px
+  padding-right: $section-content-comment-width + $section-content-comment-offset
+
+
+  .section-content__block
+    position: relative
+  .section-content__comment
+    position: absolute
+    left: 100%
+    top: 0
+    max-height: 100%
+    overflow: hidden
+    width: $section-content-comment-width
+    margin-left: $section-content-comment-offset
+
+  p, .section-content__block
     margin-bottom: 1em
     line-height: 150%
-  p + p
-    margin-top: -1em
-    text-indent: 1.5em
+    & + &
+      margin-top: -1em
+      text-indent: 1.5em
 
   h1, h2, h3, h4, h5, h6
     +f-serif-headers
