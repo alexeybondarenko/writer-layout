@@ -1,4 +1,4 @@
-bower_components
+# bower_components
 .idea
-sass/**/*.css
-sass/**/*.css.map
+# sass/**/*.css
+# sass/**/*.css.map
