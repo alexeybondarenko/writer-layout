@@ -227,9 +227,10 @@ a
   p, .section-content__block
     margin-bottom: 1em
     line-height: 150%
-    & + &
+    & + p, & + .section-content__block
       margin-top: -1em
       text-indent: 1.5em
+
 
   h1, h2, h3, h4, h5, h6
     +f-serif-headers
