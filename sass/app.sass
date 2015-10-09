@@ -18,6 +18,8 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 $border-color: #e3e3e3
+$border-color-dark: #333
+
 $text-light-color: #ccc
 
 $break-mobile: 320px
@@ -26,8 +28,6 @@ $padding: 15px 30px
 body
   margin: 0
   padding: 0
-  font-weight: 200
-  font-size: 13px
   line-height: 160%
 
   min-width: 768px
@@ -37,6 +37,8 @@ body
 body, input, button
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  font-size: 13px
+  font-weight: 200
   +f
 
 a
@@ -83,9 +85,14 @@ a
   box-sizing: border-box
   padding: $padding
   background-color: white
+  font-size: 14px
 
-  .header__logo
-    float: left
+  .header__logo, .header__nav
+    vertical-align: middle
+    display: inline-block
+  .header__nav
+    padding-left: 60px
+
   .header__profile
     float: right
 .main
@@ -252,3 +259,42 @@ a
   h6
     font-size: 0.75em
     //font-weight: bold
+
+.nav
+  list-style: none
+  margin: 0
+  padding: 0
+  &.nav_inline
+    height: 100%
+    .nav__item
+      display: inline-block
+    .nav__item + .nav__item
+      margin-left: 15px
+  &.nav_header
+    .nav__item  + .nav__item
+      margin-left: 20px
+  .nav__item
+    &.is-active
+      text-decoration: underline
+      font-weight: bold
+
+.book
+  .book__poster
+    float: left
+    width: 140px
+    height: 200px
+    padding-right: 20px
+    padding-bottom: 30px
+    img
+      width: 100%
+      height: 100%
+.btn
+  -webkit-appearance: none
+  background-color: transparent
+  display: inline-block
+  padding: 10px 15px
+  border: 1px solid $border-color-dark
+  font-size: 13px
+  font-weight: normal
+  &.btn_primary
+    background-color: $border-color
