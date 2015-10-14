@@ -6,6 +6,8 @@ var reload      = browserSync.reload;
 var del = require('del');
 var vinylPaths = require('vinyl-paths');
 
+var runSequence = require('run-sequence');
+
 var src = {
     sass: 'app/sass/**/*.{sass, scss}',
     css:  'dist/css',
@@ -46,5 +48,12 @@ gulp.task('sass', function() {
 gulp.task('copy', function () {
     gulp.src(['app/{bower_components,images,scripts}/**/*']).pipe(gulp.dest('./dist'));
 });
+gulp.task('clean', function () {
+    return del('./dist');
+});
 
-gulp.task('default', ['copy', 'serve']);
+gulp.task('build', function (cb) {
+    return runSequence('clean', ['copy', 'templates', 'sass'], cb);
+});
+
+gulp.task('default', ['build', 'serve']);

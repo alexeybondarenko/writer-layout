@@ -238,12 +238,12 @@ a
 
   $section-content-comment-width: 300px
   $section-content-comment-offset: 80px
-  padding-right: $section-content-comment-width + $section-content-comment-offset
 
 
   .section-content__block
     position: relative
   .section-content__comment
+    display: none
     position: absolute
     left: 100%
     top: 0
@@ -251,6 +251,11 @@ a
     overflow: hidden
     width: $section-content-comment-width
     margin-left: $section-content-comment-offset
+
+  &.section-content_show-comments
+    padding-right: $section-content-comment-width + $section-content-comment-offset
+    .section-content__comment
+      display: block
 
   p, .section-content__block
     margin-bottom: 1em
