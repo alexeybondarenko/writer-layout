@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block body %}
+<main class="main">
+    <div class="row">
+        <div class="col col-6 col--feeds">
+            <h2>Новости</h2>
+            <div class="feeds">
+                <div class="feeds__item">
+                    <div class="add-post">
+                        <div class="add-post__input">
+                            <textarea class="textarea"></textarea>
+                        </div>
+                        <div class="add-post__controls">
+                            <button class="btn btn_primary">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feeds__item">
+                    {% include "./partitial/feed.html" %}
+                </div>
+                <div class="feeds__item">
+                    {% include "./partitial/feed.html" %}
+                </div>
+                <div class="feeds__item">
+                    {% include "./partitial/feed.html" %}
+                </div>
+                <div class="feeds__item">
+                    {% include "./partitial/feed.html" %}
+                </div>
+                <div class="feeds__item">
+                    {% include "./partitial/feed.html" %}
+                </div>
+            </div>
+        </div>
+        <div class="col col-6">
+        </div>
+    </div>
+
+</main>
+{% endblock %}

@@ -8,8 +8,10 @@
 </head>
 <body>
 <div class="wrap">
-    {% include "./partitial/header.html" %}
-    {% block body %}{% endblock %}
+	<div class="wrap__content">
+	    {% include "./partitial/header.html" %}
+	    {% block body %}{% endblock %}
+    </div>
     {% include "./partitial/footer.html" %}
 </div>
 </body>
