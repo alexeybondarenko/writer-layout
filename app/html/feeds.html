@@ -1,40 +1,51 @@
 {% extends 'layout.html' %}
 {% block body %}
-<main class="main">
-    <div class="row">
-        <div class="col col-6 col--feeds">
-            <h2>Новости</h2>
-            <div class="feeds">
-                <div class="feeds__item">
-                    <div class="add-post">
-                        <div class="add-post__input">
-                            <textarea class="textarea"></textarea>
+<div class="row row--full-height">
+    <div class="col col-2">
+
+        <ul class="list">
+            <li>Test</li>
+        </ul>
+    </div>
+    <div class="col col-7 col--grey col--bordered">
+        <div class="feeds">
+            <div class="feeds__item">
+                <div class="add-post">
+                    <div class="add-post__wrap">
+                        <div class="add-post__user">
+                            <div class="avatar">
+                                <img src="images/users/43.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="add-post__controls">
-                            <button class="btn btn_primary">Отправить</button>
+                        <div class="add-post__input">
+                            <textarea placeholder="What are you thinking about?"></textarea>
                         </div>
                     </div>
-                </div>
-                <div class="feeds__item">
-                    {% include "./partitial/feed.html" %}
-                </div>
-                <div class="feeds__item">
-                    {% include "./partitial/feed.html" %}
-                </div>
-                <div class="feeds__item">
-                    {% include "./partitial/feed.html" %}
-                </div>
-                <div class="feeds__item">
-                    {% include "./partitial/feed.html" %}
-                </div>
-                <div class="feeds__item">
-                    {% include "./partitial/feed.html" %}
+                    <div class="add-post__controls">
+                        <button class="btn btn_primary">Отправить</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col col-6">
+            <div class="feeds__item">
+                {% include "./partitial/feed.html" %}
+            </div>
+            <div class="feeds__item">
+                {% include "./partitial/feed.html" %}
+            </div>
+            <div class="feeds__item">
+                {% include "./partitial/feed--book.html" %}
+            </div>
+            <div class="feeds__item">
+                {% include "./partitial/feed.html" %}
+            </div>
+            <div class="feeds__item">
+                {% include "./partitial/feed.html" %}
+            </div>
         </div>
     </div>
-
-</main>
+    <div class="col col-3">
+        <h2>Новинки</h2>
+        {% include "./partitial/books.html" %}
+    </div>
+</div>
 {% endblock %}

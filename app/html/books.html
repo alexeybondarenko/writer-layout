@@ -1,13 +1,11 @@
 {% extends 'layout.html' %}
 {% block body %}
-<main class="main">
-    <div class="row">
-        <div class="col col-12">
-            <h2>Новинки</h2>
-            {% include "./partitial/books.html" %}
-            <h2>Лучшие книги месяца</h2>
-            {% include "./partitial/books.html" %}
-        </div>
+<div class="row">
+    <div class="col col-12">
+        <h2>Новинки</h2>
+        {% include "./partitial/books.html" %}
+        <h2>Лучшие книги месяца</h2>
+        {% include "./partitial/books.html" %}
     </div>
-</main>
+</div>
 {% endblock %}

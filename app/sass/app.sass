@@ -20,15 +20,19 @@
 @import lib/normalize
 
 $border-color: #e3e3e3
-$border-color-dark: #333
+$border-color-dark: #666
 
 $text-light-color: #ccc
 
 $break-mobile: 320px
 $padding: 15px 30px
 
+$text-size: 13px
+
 $black: #000000
 
+html, body
+  height: 100%
 body
   margin: 0
   padding: 0
@@ -41,7 +45,7 @@ body
 body, input, button
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  font-size: 13px
+  font-size: $text-size
   font-weight: 300
   +f
 
@@ -78,18 +82,27 @@ a
       font-style: italic
 
 .main, .wrap
-  height: 100%
-  min-height: 100%
-  display: block
+  //min-height: 100%
+  //display: block
+.container
+  width: 900px
+  margin-left: auto
+  margin-right: auto
 .wrap
-  margin: 20px 26px 0 20px
-  
+  background-color: #FFF
+  min-height: 100%
+  //margin: 20px 26px 0 20px
   // overflow: hidden
   .wrap__content
-    background-color: #FFF
-    border-radius: 3px
-    box-shadow: 0 7px 20px rgba($black, .3)
+    min-height: 100%
+    //background-color: #FFF
+    //border-radius: 3px
+    //box-shadow: 0 7px 20px rgba($black, .3)
     overflow: hidden
+  .wrap__footer
+    background-color: #f1f1f1
+    border-top: 1px solid $border-color
+
 .header
   height: 60px
   display: block
@@ -138,17 +151,11 @@ a
       display: inline-block
     .profile-nav__text
       padding-right: 10px
-    .profile-nav__img
-      height: 30px
-      width: 30px
-      border-radius: 100%
-      box-sizing: border-box
-      overflow: hidden
 
 .footer
-  padding: 15px 20px
+  padding: 15px 30px
   box-sizing: border-box
-  color: white
+  //color: white
 
 .pull-right
   float: right
@@ -159,24 +166,30 @@ a
   height: 100%
   width: 100%
   box-sizing: border-box
+  font-size: 0
+  
   +clearfix
-
+  &--full-height
+    & > .col
+      height: 100%
 .col
   padding: $padding
   overflow: hidden
   height: 100%
   min-height: 100%
   box-sizing: border-box
-  +min($break-mobile)
-    float: left
-    display: inline-block
+  font-size: $text-size
+  vertical-align: top
+  display: inline-block
 
   $class-col: 'col'
   @for $i from 1 through 12
     &.#{$class-col}-#{$i}
-      width: 100% * $i / 12 - 0.1
+      width: 100% * $i / 12
 
 .col
+  &--grey
+    background-color: #f9f9f9
   .col__close
     float: right
     font-size: 24px
@@ -186,13 +199,11 @@ a
     &:hover
       text-decoration: none
       color: #333333
-
-.col:nth-child(2n), .col_border-left
-
-  position: relative
-  border-width: 0 0 0 1px
-  border-style: solid
-  border-color: $border-color
+  &--bordered
+    border-right: 1px solid $border-color
+    & + .col
+      border-left: 1px solid $border-color
+      margin-left: -1px
 
 .comments
   &.comments_book
@@ -211,7 +222,7 @@ a
 
 
   .comments-block__header
-    //padding-bottom: 10px
+    margin-bottom: 5px
     .comments-block__name
       color: #333
       font-weight: normal
@@ -221,11 +232,6 @@ a
       &.is-active
         img
           border: 1px solid #666
-    img
-      width: 30px
-      height: 30px
-      border-radius: 100%
-      overflow: hidden
     span
       margin-left: 10px
       white-space: nowrap
@@ -335,6 +341,7 @@ a
   background-color: transparent
   display: inline-block
   padding: 10px 15px
+  border-radius: 3px
   border: 1px solid $border-color-dark
   font-size: 13px
   font-weight: normal
@@ -347,11 +354,15 @@ a
     // padding: 0
 .books
   +clearfix
+  white-space: nowrap
+  overflow-x: scroll
+  overflow-y: hidden
   .books__item
     +clearfix
     display: inline-block
     vertical-align: top
     width: 100px
+    white-space: normal
     span
       display: block
       max-height: 40px
@@ -398,12 +409,58 @@ a
   resize: none
 
 .add-post
-  .add-post__input > textarea
-    width: 100%
+  position: relative
+  .add-post__input
+    & > textarea
+      line-height: 1.4
+      width: 100%
+      display: block
+      appearance: none
+      resize: vertical
+      padding: 20px 15px 10px 60px
+      background-color: transparent
+      box-sizing: border-box
+      border: none
+      height: 60px
+
+  .add-post__wrap
+    line-height: 0
+    background-color: #fff
+    border-radius: 4px
+    overflow: hidden
+    border: 1px solid #ccc
+    margin-bottom: 10px
   .add-post__controls
     +clearfix
     .btn
       float: right
+  .add-post__user
+    position: absolute
+    top: 10px
+    left: 10px
+.avatar
+  display: inline-block
+  width: 40px
+  height: 40px
+  border-radius: 100%
+  box-sizing: border-box
+  overflow: hidden
+
+  vertical-align: middle
+
+  img
+    height: 100%
+    width: 100%
+  &--small
+    width: 30px
+    height: 30px
+  &--medium
+    width: 60px
+    height: 60px
+  &--big
+    width: 100px
+    height: 100px
+
 .feeds
   .feeds__item
     margin-bottom: 20px
@@ -425,27 +482,7 @@ a
     a
       font-weight: bold
   .feed__author
-    border-radius: 50%
-    overflow: hidden
-    display: inline-block
-    width: 40px
-    height: 40px
     float: left
     margin: 0 10px 0 0
-    img 
-      width: 100%
-      height: 100%
-
-
-
-
-.col--feeds
-  background-color: #f9f9f9
-
-
-
-
-
-
 
 

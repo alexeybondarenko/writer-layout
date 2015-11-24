@@ -1,19 +1,18 @@
 {% extends 'layout.html' %}
 {% block body %}
 <!--  Book page-->
-<main class="main">
-    <div class="row">
-        <!--<div class="col col-2"></div>-->
-        <div class="col col-6">
-            {% include "./partitial/book.html" %}
-        </div>
-        <div class="col col-6">
-            <h2>Комментарии (120)</h2>
-            {% include "./partitial/comments.html" %}
-            <h2>Спасибо&nbsp;︎<span class="unicode">&star;</span></h2>
-            {% include "./partitial/thanks.html" %}
-            <p><i>Автор отмечает лучшие комментарии статусом "Спасибо"</i></p>
-        </div>
+
+<div class="row">
+    <!--<div class="col col-2"></div>-->
+    <div class="col col-6">
+        {% include "./partitial/book.html" %}
     </div>
-</main>
+    <div class="col col-6">
+        <h2>Комментарии (120)</h2>
+        {% include "./partitial/comments.html" %}
+        <h2>Спасибо&nbsp;︎<span class="unicode">&star;</span></h2>
+        {% include "./partitial/thanks.html" %}
+        <p><i>Автор отмечает лучшие комментарии статусом "Спасибо"</i></p>
+    </div>
+</div>
 {% endblock %}

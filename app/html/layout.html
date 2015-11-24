@@ -10,9 +10,15 @@
 <div class="wrap">
 	<div class="wrap__content">
 	    {% include "./partitial/header.html" %}
-	    {% block body %}{% endblock %}
+        <main class="main">
+            <div class="container">
+	            {% block body %}{% endblock %}
+            </div>
+        </main>
     </div>
-    {% include "./partitial/footer.html" %}
+    <div class="wrap__footer">
+        {% include "./partitial/footer.html" %}
+    </div>
 </div>
 </body>
 </html>

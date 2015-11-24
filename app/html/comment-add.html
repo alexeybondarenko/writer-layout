@@ -1,23 +1,21 @@
 {% extends 'layout.html' %}
 {% block body %}
 <!--  Section reading -->
-<main class="main">
-    <div class="row">
-        <div class="col col-2">
-            <!--<a href="#/project" class="link link-primary">Вернуться к описанию</a>-->
-            <h2>Разделы</h2>
-            {% include "./partitial/list--sections.html" %}
-        </div>
-        <div class="col col-6">
-            <h2><a href="./book-info.html">Филосовский филогенез</a></h2>
-            <div class="section-content">
-                {% include "./partitial/section-content_in.html" %}
-            </div>
-        </div>
-        <div class="col col-4">
-            <h2>Добавить комментарий</h2>
-            {% include "./partitial/comment-add.html" %}
+<div class="row">
+    <div class="col col-2">
+        <!--<a href="#/project" class="link link-primary">Вернуться к описанию</a>-->
+        <h2>Разделы</h2>
+        {% include "./partitial/list--sections.html" %}
+    </div>
+    <div class="col col-6">
+        <h2><a href="./book-info.html">Филосовский филогенез</a></h2>
+        <div class="section-content">
+            {% include "./partitial/section-content_in.html" %}
         </div>
     </div>
-</main>
+    <div class="col col-4">
+        <h2>Добавить комментарий</h2>
+        {% include "./partitial/comment-add.html" %}
+    </div>
+</div>
 {% endblock %}
