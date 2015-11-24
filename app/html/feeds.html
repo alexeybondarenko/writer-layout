@@ -1,13 +1,21 @@
 {% extends 'layout.html' %}
 {% block body %}
 <div class="row row--full-height">
-    <div class="col col-2">
-
+    <div class="col col-2 col--menu">
+        <h4><a href="#/favorites">Favorites</a></h4>
         <ul class="list">
-            <li>Test</li>
+            <li><a href="#/user" class="is-online">Анатолий Вассерман</a></li>
+            <li><a href="#/user">Борис Акунин</a></li>
+        </ul>
+        <h4>My books</h4>
+        <ul class="list">
+            <li><a href="#/book">First 100 Words</a></li>
+            <li><a href="#/book">Diary of a Wimpy Kid #10: Old School</a></li>
+            <li><a href="#/book">Laugh-Out-Loud Jokes for Kids</a></li>
+            <li><a href="#/book">Secret Garden: An Inky Treasure Hunt...</a></li>
         </ul>
     </div>
-    <div class="col col-7 col--grey col--bordered">
+    <div class="col col-7">
         <div class="feeds">
             <div class="feeds__item">
                 <div class="add-post">
@@ -44,8 +52,8 @@
         </div>
     </div>
     <div class="col col-3">
-        <h2>Новинки</h2>
-        {% include "./partitial/books.html" %}
+        <!--<h2>Новое для вас</h2>-->
+        <!--{% include "./partitial/books.html" %}-->
     </div>
 </div>
 {% endblock %}
