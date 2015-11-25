@@ -15,8 +15,8 @@
         </div>
     </div>
     <h2>Содержание</h2>
-    <div class="book__sections">
-        <ol class="list">
+    <div class="book__block">
+        <ol class="list list--decimal">
             <li>
                 <a href="book-reader.html">Трансцендентальный интеллект: основные моменты</a>
             </li>
@@ -36,8 +36,12 @@
             </li>
         </ol>
     </div>
-    <h3>Другие книги автора (<a href="#/author/1">Д.Майерс</a>)</h3>
-    {% include "./books.html" %}
-    <h3>Читатели также выбирают</h3>
-    {% include "./books.html" %}
+    <div class="book__block">
+        <h3>Другие книги автора (<a href="#/author/1">Д.Майерс</a>)</h3>
+        {% include "./books.html" %}
+    </div>
+    <div class="book__block">
+        <h3>Читатели также выбирают</h3>
+        {% include "./books.html" %}
+    </div>
 </div>
