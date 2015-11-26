@@ -1,12 +1,5 @@
 
-=min ($min-width)
-  @media screen and (min-width: $min-width)
-    @content
-=clearfix
-  &:after
-    content: ''
-    display: table
-    clear: both
+
 
 =f-serif
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif
@@ -23,6 +16,8 @@
   box-shadow: 0 1px 1px rgba(#ccc, .4)
   border-radius: 3px
 @import lib/normalize
+@import lib/mixins
+
 
 $border-color: #e3e3e3
 $border-color-dark: #666
@@ -102,6 +97,22 @@ a
       display: list-item
       list-style: decimal
       margin-left: 1.5em
+  &--menu
+    margin-bottom: 0
+    li
+      padding: 8px 10px
+      border-width: 1px 0
+      border-style: solid
+      border-color: $border-color
+      margin: -1px 0
+
+      &:hover
+        background-color: #f9f9f9
+
+      &:active
+        background-color: $border-color
+
+
 
 .main, .wrap
   //min-height: 100%
@@ -602,4 +613,46 @@ h1, h2, h3, h4, h5, h6
     padding: $padding
     border-right: 1px solid $border-color
     box-shadow: 1px 0 3px $border-color
+
+.tooltip-wrap
+  position: relative
+  &:hover
+    .tooltip
+      display: block
+  &:after
+    content: ''
+    width: 100%
+    height: 10px
+    display: block
+    position: absolute
+    top: 100%
+
+  .tooltip
+    display: none
+    position: absolute
+    margin-top: 10px
+    top: 100%
+    left: 0px
+    text-align: left
+    background-color: white
+
+    min-width: 120px
+    +box-style
+    $tooltip-arrow-offset-left: 10px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: $tooltip-arrow-offset-left+ 5px
+      top: -8px
+      +arr(10, 8, white, t)
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: $tooltip-arrow-offset-left+ 4px
+      top: -10px
+      +arr(12, 9, $border-color, t)
 
