@@ -1,0 +1,69 @@
+<div class="feed">
+    <div class="feed__header">
+        <div class="feed__author">
+            <div class="avatar">
+                <img src="images/users/20.jpg" alt="User 1 profile img"/>
+            </div>
+        </div>
+        <div class="feed__title">
+            <b>John Smith</b> <span>poested new comment in book <a href="book-info.html">Laugh-Out-Loud Jokes for Kids</a></span>
+        </div>
+        <div>
+            <span>2 hours ago</span>
+        </div>
+    </div>
+    <div class="feed__content">
+        Some text that expire and very long long long ...
+    </div>
+    <div class="feed__controls">
+        <button class="btn btn--clear">
+            <i class="lnr lnr-thumbs-up"></i>&nbsp;
+            Like
+        </button>
+        <button class="btn btn--clear is-active">
+            <i class="lnr lnr-bubble"></i>&nbsp;
+            Comments
+        </button>
+        <button class="btn btn--clear tooltip-wrap">
+            <i class="lnr lnr-exit-up"></i>&nbsp;
+            Share
+            <div class="tooltip">
+                <ul class="list list--menu">
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Email</li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    <div class="feed__comments">
+        <div class="comments">
+            {% include "comments-block--small.html" %}
+            <div class="comments__children">
+                <div class="comments">
+                    {% include "comments-block--small.html" %}
+                    {% include "comments-block--small.html" %}
+                </div>
+            </div>
+            {% include "comments-block--small.html" %}
+            {% include "comments-block--small.html" %}
+            <div class="comments__children">
+                <div class="comments">
+                    {% include "comments-block--small.html" %}
+                </div>
+            </div>
+            <div class="comments__form">
+                <div class="comments-form">
+                    <div class="comments-form__user">
+                        <div class="avatar avatar--small">
+                            <img src="images/users/43.jpg" alt="User Firstname Lastname">
+                        </div>
+                    </div>
+                    <div class="comments-form__input">
+                        <input type="text" class="input" placeholder="Написать комментарий...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
