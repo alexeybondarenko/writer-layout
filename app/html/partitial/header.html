@@ -13,21 +13,15 @@
             </div>
             <div class="col col-7">
                 <div class="header__nav">
-                    <div class="search-form">
-                        <div class="search-form__accessory">
-                            <i class="lnr lnr-magnifier"></i>
-                        </div>
-                        <input type="text" class="input">
-                    </div>
-                    <!--<ul class="nav nav_inline nav_header">-->
-                        <!--<li class="nav__item">-->
-                            <!--<a href="#/my-books">Мои книги</a>-->
-                        <!--</li>-->
-                        <!--<li class="nav__item">-->
-                            <!--<a href="#/news">Новинки</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-
+                    <ul class="nav nav--inline nav--header">
+                        <li class="nav__item">
+                            <a href="#/my-books">Мои книги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#/news">Новинки</a>
+                        </li>
+                    </ul>
+                    {% include "search-form.html" %}
                 </div>
             </div>
             <div class="col col-3">

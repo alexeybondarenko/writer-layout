@@ -410,13 +410,15 @@ a
   list-style: none
   margin: 0
   padding: 0
-  &.nav_inline
+  &--inline
     height: 100%
     .nav__item
       display: inline-block
     .nav__item + .nav__item
       margin-left: 15px
-  &.nav_header
+  &--header
+    display: inline-block
+    margin-right: 30px
     .nav__item  + .nav__item
       margin-left: 20px
   .nav__item
@@ -769,11 +771,15 @@ blockquote p
 
 .search-form
   display: inline-block
-  width: 200px
+  //width: 200px
+  //width: 100%
   position: relative
   .search-form__accessory
     position: absolute
-    top: 5px
+    top: 7px
     left: 8px
   .input
-    padding-left: 12px
+    padding-left: 30px
+    border-radius: 4px
+    outline: none
+    //border-width: 0 0 1px 0
