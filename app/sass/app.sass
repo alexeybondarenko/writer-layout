@@ -782,4 +782,24 @@ blockquote p
     padding-left: 30px
     border-radius: 4px
     outline: none
-    //border-width: 0 0 1px 0
+  &--big
+    .input
+      border: 0
+      border-bottom: 2px solid $border-color-dark
+      border-radius: 0
+      font-size: 2.5em
+      padding-left: .1em
+    .search-form__accessory
+      display: none
+.search
+  .search__form
+    margin-bottom: 30px
+.search-result
+  //+box-style
+  +clearfix
+  //padding: 10px
+  //border: 0
+  .search-result__image
+    float: left
+    margin-right: 1em
+  .search-result__content
