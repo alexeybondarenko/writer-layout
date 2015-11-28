@@ -69,6 +69,10 @@ a
   display: none !important
 .link
   color: desaturate($primary, 30%)
+  cursor: pointer
+
+    //vertical-align: middle
+
 
 
 .list
@@ -281,6 +285,12 @@ a
     //padding-left: 10px
     margin-left: 40px
     //padding-top: 10px
+  .comments__more
+    margin-bottom: 15px
+    .icon
+      vertical-align: middle
+      margin-right: .3em
+    //color: $
 
 .comments-block
   +f
@@ -290,6 +300,11 @@ a
   width: 100%
   height: 100%
   margin-bottom: 10px
+  .comments-block__control
+    float: right
+    font-size: 11px
+    cursor: pointer
+    margin-top: 2px
 
   .comments-block__header
     margin-bottom: 5px
@@ -701,3 +716,18 @@ h1, h2, h3, h4, h5, h6
     box-sizing: border-box
     .input
       width: 100%
+.input-wrap
+  position: relative
+  .input-wrap__accessory
+    position: absolute
+    right: 8px
+    top: 5px
+    font-size: 16px
+    color: #666
+
+.reset
+  border: 0
+  padding: 0
+  margin: 0
+  appearance: none
+  background: transparent
