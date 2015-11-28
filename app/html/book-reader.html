@@ -20,9 +20,14 @@
     </div>
     <div class="col col-12">
         {% include "./partitial/section-content.html" %}
-        <div class="btns-group">
-            <a href="comment-add.html" class="btn">Добавить комментарий</a>
-        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-8">
+        <h2>Комментарии</h2>
+        {% include "./partitial/comments-form--big.html" %}
+        <br>
+        {% include "./partitial/comments--reader.html" %}
     </div>
 </div>
 

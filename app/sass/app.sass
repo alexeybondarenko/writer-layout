@@ -23,7 +23,7 @@ $border-color: #e3e3e3
 $border-color-dark: #666
 
 $text-color: #333
-$text-light-color: #999
+$text-light-color: #666
 
 $break-mobile: 320px
 
@@ -291,6 +291,14 @@ a
       vertical-align: middle
       margin-right: .3em
     //color: $
+  .comments__quote-group
+    font-size: 1.3em
+    text-overflow: ellipsis
+    color: $text-light-color
+  &--reader
+    .comments__item
+      margin-bottom: 2em
+
 
 .comments-block
   +f
@@ -336,6 +344,12 @@ a
       float: left
     .comments-block__text
       padding-left: 40px
+  &--big
+    font-size: 1em
+    .comments-block__header
+      margin-bottom: 1em
+    .comments-block__text
+      font-size: 1.1em
 .section-content
   +f-serif
   font-size: 17px
@@ -445,7 +459,7 @@ a
   user-select: none
   &:focus
     outline: none
-  &.btn_primary
+  &--primary
     border-radius: 4px
     background-color: rgba($primary,1)
     color: white
@@ -711,6 +725,7 @@ h1, h2, h3, h4, h5, h6
     //display: inline-block
   .comments-form__input
     //display: inline-block
+    +clearfix
     padding-left: 40px
     width: 100%
     box-sizing: border-box
@@ -731,3 +746,23 @@ h1, h2, h3, h4, h5, h6
   margin: 0
   appearance: none
   background: transparent
+
+blockquote
+  //background: #f9f9f9
+  //border-left: 10px solid #ccc
+  text-indent: 0
+  margin: 1.5em 0
+  padding: 0.5em 0
+  quotes: "\201C""\201D""\201C""\201D"
+  font-style: italic
+
+blockquote:before
+  color: #ccc
+  content: open-quote
+  font-size: 4em
+  line-height: 0.1em
+  margin-right: .1em
+  //margin-left: -.6em
+  vertical-align: -0.4em
+blockquote p
+  display: inline
