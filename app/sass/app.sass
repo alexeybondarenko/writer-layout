@@ -109,6 +109,7 @@ a
       border-style: solid
       border-color: $border-color
       margin: -1px 0
+      cursor: pointer
 
       &:hover
         background-color: #f9f9f9
@@ -148,7 +149,7 @@ a
   height: 60px
   display: block
   border-bottom: 1px solid $border-color
-  overflow: hidden
+  //overflow: hidden
   box-sizing: border-box
   font-size: 14px
   //margin-bottom: 10px
@@ -178,20 +179,14 @@ a
 
 .profile-nav
   position: relative
-  .profile-nav__dropdown
-    position: absolute
-    top: 100%
-    right: 0
-  .profile-nav__el
-    color: inherit
-    text-decoration: none
-    &:hover
-      opacity: .8
-    .profile-nav__text, .profile-nav__img
-      vertical-align: middle
-      display: inline-block
-    .profile-nav__text
-      padding-right: 10px
+  cursor: pointer
+  &:hover
+    opacity: .8
+  .profile-nav__text, .profile-nav__img
+    vertical-align: middle
+    display: inline-block
+  .profile-nav__text
+    padding-right: 10px
 
 .footer
 
@@ -684,46 +679,60 @@ h1, h2, h3, h4, h5, h6
 
 .tooltip-wrap
   position: relative
-  &:hover
-    .tooltip
-      display: block
+
+  $tooltip-top-offset: 10px
   &:after
     content: ''
     width: 100%
-    height: 10px
+    height: $tooltip-top-offset
     display: block
     position: absolute
     top: 100%
 
+  &--hover
+    &:hover
+      .tooltip
+        display: block
+    .tooltip
+      display: none
   .tooltip
-    z-index: 3
-    display: none
     position: absolute
-    margin-top: 10px
-    top: 100%
-    left: 0px
-    text-align: left
-    background-color: white
+    margin-top: $tooltip-top-offset
+    //top: 100%
+    //left: 0px
+    
+.tooltip
+  z-index: 3
+  text-align: left
+  background-color: white
 
-    min-width: 120px
-    +box-style
-    $tooltip-arrow-offset-left: 10px
+  min-width: 120px
+  +box-style
+  display: inline-block
+  $tooltip-arrow-offset-left: 10px
 
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: $tooltip-arrow-offset-left+ 5px
+    top: -8px
+    +arr(10, 8, white, t)
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: $tooltip-arrow-offset-left+ 4px
+    top: -10px
+    +arr(12, 9, $border-color, t)
+  &--right
     &:after
-      content: ''
-      display: block
-      position: absolute
-      left: $tooltip-arrow-offset-left+ 5px
-      top: -8px
-      +arr(10, 8, white, t)
-
+      left: auto
+      right: $tooltip-arrow-offset-left+ 5px
     &:before
-      content: ''
-      display: block
-      position: absolute
-      left: $tooltip-arrow-offset-left+ 4px
-      top: -10px
-      +arr(12, 9, $border-color, t)
+      left: auto
+      right: $tooltip-arrow-offset-left+ 4px
 
 .comments-form
   .comments-form__user
