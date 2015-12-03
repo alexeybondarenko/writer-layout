@@ -77,7 +77,7 @@ a
 
 .list
   display: block
-  margin: 0 0 1em
+  margin: 0
   padding: 0
   font-size: 14px
 
@@ -85,7 +85,7 @@ a
     +f-serif
     font-size: 15px
 
-  li
+  li, .list__item
     display: block
     margin-bottom: 8px
     //line-height: 30px
@@ -96,14 +96,18 @@ a
       opacity: .9
     &.is-progress
       font-style: italic
+  &--inline
+    li, .list__item
+      display: inline-block
+      margin-right: 10px
   &--decimal
-    li
+    li, .list__item
       display: list-item
       list-style: decimal
       margin-left: 1.5em
   &--menu
     margin-bottom: 0
-    li
+    li, .list__item
       padding: 8px 10px
       border-width: 1px 0
       border-style: solid
@@ -848,4 +852,4 @@ blockquote p
     display: inline-block
     vertical-align: middle
     h2
-      margin-bottom: 0
+      margin-bottom: 10px

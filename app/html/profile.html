@@ -8,9 +8,25 @@
             </div>
             <div class="profile-header__content">
                 <h2>Виктор Пелевин</h2>
-                <p>230 followers</p>
+                <div>
+                    <ul class="list list--inline">
+                        <li>16 подписчиков</li>
+                        <li>76 подписок</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col col-12">
+        <h2>Любимые книги</h2>
+        {% include "partitial/books.html" %}
+    </div>
+    <div class="col col-12">
+        <h2>Ваши книги</h2>
+        {% include "partitial/books.html" %}
+    </div>
+</div>
+
 {% endblock %}
