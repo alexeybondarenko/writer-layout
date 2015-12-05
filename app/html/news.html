@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row">
+    <div class="col col-12">
+        <h2>Новые книги</h2>
+        {% include "partitial/books.html" %}
+    </div>
+    <div class="col col-12">
+        <h2>Пользователи рекомендуют</h2>
+        {% include "partitial/books.html" %}
+    </div>
+</div>
+
+{% endblock %}
