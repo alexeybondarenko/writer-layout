@@ -1,0 +1,32 @@
+/***
+  Is Online
+
+  State that add to the block green circle on the left side
+
+  ## Examples
+
+  ### Single element
+  ```
+  <a href="profile.html" class="is-online">Анатолий Вассерман</a>
+  ```
+
+  ### List
+  ```
+  <ul class="list">
+      <li><a href="profile.html" class="is-online">Анатолий Вассерман</a></li>
+      <li><a href="profile.html">Борис Акунин</a></li>
+  </ul>
+  ```
+.is-online
+  display: inline-block
+  position: relative
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: 8px
+    height: 8px
+    border-radius: 100%
+    left: -1em
+    top: .5em
+    background-color: $green
