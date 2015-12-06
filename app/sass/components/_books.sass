@@ -1,0 +1,50 @@
+/***
+  Books
+
+  Collection of the books.
+
+  ## Examples
+
+  ```
+  <div class="books">
+      <a href="book-info.html#/book/1" class="books__item">
+          <img src="images/placeholder.png" alt="Book 1"/>
+          <div>Обьективное - невероятное</div>
+      </a>
+      <a href="book-info.html#/book/2" class="books__item">
+          <img src="images/placeholder.png" alt="Book 2"/>
+          <span>Давно забытая загадка инков</span>
+      </a>
+      <a href="book-info.html#/book/3" class="books__item">
+          <img src="images/placeholder.png" alt="Book 3"/>
+          <span>Кот и тапок гуся</span>
+      </a>
+      <a href="book-info.html#/book/3" class="books__item">
+          <img src="images/placeholder.png" alt="Book 3"/>
+          <span>Кот и тапок гуся</span>
+      </a>
+  </div>
+  ```
+
+.books
+  +clearfix
+  white-space: nowrap
+  overflow-x: scroll
+  overflow-y: hidden
+  .books__item
+    +clearfix
+    display: inline-block
+    vertical-align: top
+    width: 100px
+    white-space: normal
+    span
+      display: block
+      max-height: 40px
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: pre-line
+    img
+      width: 100%
+      height: 140px
+  .books__item + .books__item
+    margin-left: 10px

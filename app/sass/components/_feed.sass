@@ -1,0 +1,146 @@
+/***
+  # Feed
+
+  Element with feed from user.
+  ## Examples
+
+  ### Basic
+  <div class="feed">
+      <div class="feed__header">
+          <div class="feed__author">
+              <a class="avatar" href="profile.html">
+                  <img src="images/users/17.jpg" alt="User 1 profile img"/>
+              </a>
+          </div>
+          <div class="feed__title">
+              <a href="profile.html"><b>Lilya New</b></a> <span>poested new comment in book <a href="book-info.html">New History of Julie</a></span>
+          </div>
+          <div>
+              <span>2 hours ago</span>
+          </div>
+      </div>
+      <div class="feed__content">
+          Some text that expire
+      </div>
+      <div class="feed__controls">
+          <button class="btn btn--clear">
+              <i class="lnr lnr-thumbs-up"></i>&nbsp;
+              Like
+          </button>
+          <button class="btn btn--clear">
+              <i class="lnr lnr-bubble"></i>&nbsp;
+              Comments
+          </button>
+          <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+              <i class="lnr lnr-exit-up"></i>&nbsp;
+              Share
+              <div class="tooltip">
+                  <ul class="list list--menu">
+                      <li>Facebook</li>
+                      <li>Twitter</li>
+                      <li>Email</li>
+                  </ul>
+              </div>
+          </button>
+      </div>
+  </div>
+
+  ### Book
+
+  <div class="feed feed--book">
+      <div class="feed__header">
+          <div class="feed__title">
+              <b>Рекомендации</b>
+              <a href="#" class="pull-right">
+                  <i class="lnr lnr-cross "></i>
+              </a>
+          </div>
+      </div>
+      <div class="feed__content">
+          {% include "./books.html" %}
+      </div>
+  </div>
+
+  ### Comments
+
+  <div class="feed">
+      <div class="feed__header">
+          <div class="feed__author">
+              <a class="avatar" href="profile.html">
+                  <img src="images/users/20.jpg" alt="User 1 profile img"/>
+              </a>
+          </div>
+          <div class="feed__title">
+              <a href="profile.html"><b>John Smith</b></a> <span>poested new comment in book <a href="book-info.html">Laugh-Out-Loud Jokes for Kids</a></span>
+          </div>
+          <div>
+              <span>2 hours ago</span>
+          </div>
+      </div>
+      <div class="feed__content">
+          Some text that expire and very long long long ...
+      </div>
+      <div class="feed__controls">
+          <button class="btn btn--clear">
+              <i class="lnr lnr-thumbs-up"></i>&nbsp;
+              Like
+          </button>
+          <button class="btn btn--clear is-active">
+              <i class="lnr lnr-bubble"></i>&nbsp;
+              Comments
+          </button>
+          <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+              <i class="lnr lnr-exit-up"></i>&nbsp;
+              Share
+              <div class="tooltip">
+                  <ul class="list list--menu">
+                      <li>Facebook</li>
+                      <li>Twitter</li>
+                      <li>Email</li>
+                  </ul>
+              </div>
+          </button>
+      </div>
+      <div class="feed__comments">
+          <div class="comments">
+              {% include "comments-block--small.html" %}
+              <div class="comments__children">
+                  <div class="comments">
+                      {% include "comments-block--small.html" %}
+                      {% include "comments-block--small.html" %}
+                  </div>
+              </div>
+              {% include "comments-block--small.html" %}
+              {% include "comments-block--small.html" %}
+              <div class="comments__children">
+                  <div class="comments">
+                      {% include "comments-block--small.html" %}
+                  </div>
+              </div>
+              <div class="comments__form">
+                  {% include "comments-form.html" %}
+              </div>
+          </div>
+      </div>
+  </div>
+
+.feed
+  +box-style
+  +clearfix
+  .feed__header
+    padding: 10px 15px
+    border-bottom: 1px solid #f1f1f1
+  .feed__content
+    padding: 10px 15px
+  .feed__controls
+    border-top: 1px solid #f1f1f1
+
+  .feed__title
+    a
+      font-weight: bold
+  .feed__author
+    float: left
+    margin: 0 10px 0 0
+  .feed__comments
+    background-color: #f9f9f9
+    padding: 15px 20px

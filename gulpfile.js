@@ -8,6 +8,10 @@ var vinylPaths = require('vinyl-paths');
 
 var runSequence = require('run-sequence');
 
+var styleguidejs = require('gulp-styleguidejs'),
+    styleguide = require('sc5-styleguide');
+
+
 var src = {
     sass: 'app/sass/**/*.{sass, scss}',
     css:  'dist/css',
@@ -40,7 +44,9 @@ gulp.task('templates', function() {
 // Compile sass into CSS
 gulp.task('sass', function() {
     return gulp.src(src.sass)
-        .pipe(sass())
+        .pipe(sass({
+            sourceComments: true
+        }))
         .pipe(gulp.dest(src.css))
         .pipe(reload({stream: true}));
 });
@@ -55,5 +61,22 @@ gulp.task('clean', function () {
 gulp.task('build', function (cb) {
     return runSequence('clean', ['copy', 'templates', 'sass'], cb);
 });
+
+gulp.task('docs', ['build'], function () {
+    gulp.src('dist/css/app.css')
+        .pipe(styleguidejs())
+        .pipe(gulp.dest('docs'));
+});
+gulp.task('styleguide', ['build'], function() {
+    return gulp.src('dist/css/app.css')
+        .pipe(styleguide.generate({
+            title: 'My Styleguide',
+            server: true,
+            rootPath: 'docs',
+            overviewPath: 'docs.md'
+        }))
+        .pipe(gulp.dest('docs'));
+});
+
 
 gulp.task('default', ['build', 'serve']);

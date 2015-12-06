@@ -2,47 +2,30 @@
     <div class="container">
         <div class="row">
             <div class="col col-2">
-                <div class="header__logo">
-                    <a href="feeds.html" class="logo">
-                        <!--<img src="images/placeholder.png" alt="Writer.io logo" class="logo__img"/>-->
-                            <span class="logo__text">
-                                <b>Writer.io</b>
-                            </span>
-                    </a>
-                </div>
+                <a href="feeds.html" class="logo">
+                    <span class="logo__text">
+                        <b>Writer.io</b>
+                    </span>
+                </a>
             </div>
             <div class="col col-7">
-                <div class="header__nav">
-                    <ul class="nav nav--inline nav--header">
-                        <!--<li class="nav__item">-->
-                            <!--<a href="#/my-books">Мои книги</a>-->
-                        <!--</li>-->
-                        <li class="nav__item">
-                            <a href="news.html">Новинки</a>
-                        </li>
-                    </ul>
-                    {% include "search-form.html" %}
-                </div>
+                <ul class="list list--inline list--nav">
+                    <li>
+                        <a href="news.html">Новинки</a>
+                    </li>
+                </ul>
+                {% include "search-form.html" %}
             </div>
             <div class="col col-3">
-                <div class="header__profile">
-                    <div class="profile-nav">
-                        <div class="profile-nav__text">
-                            Виктор Пелевин
-                        </div>
-                        <span class="avatar avatar--small">
-                            <img src="images/users/43.jpg" alt="Ivan Ivanov profile avatar" class="profile-nav__img"/>
-                        </span>
-                        <!--<div class="profile-nav__dropdown">-->
-                            <!--<ul>-->
-                                <!--<li>Profile</li>-->
-                                <!--<li>Subscriptions</li>-->
-                                <!--<li>Logout</li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
+                <div class="profile-header profile-header--nav pull-right">
+                    <div class="profile-header__content">
+                        Виктор Пелевин
                     </div>
+                    <span class="profile-header__image avatar avatar--small">
+                        <img src="images/users/43.jpg" alt="Ivan Ivanov profile avatar" class="profile-nav__img"/>
+                    </span>
                 </div>
-            </div>t
+            </div>
         </div>
         <div class="tooltip-wrap">
             <div class="tooltip tooltip--right" style="position: absolute; right: 10px; top: 0">
@@ -52,7 +35,7 @@
                     <a class="list__item">
                         <b>Logout</b>
                     </a>
-                </ul>
+                </div>
             </div>
         </div>
     </div>

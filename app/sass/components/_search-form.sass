@@ -1,0 +1,47 @@
+/***
+  Search Form
+  Search form field.
+
+  ## Example
+
+  ### Compact
+  ```
+  <form class="search-form" action="search.html">
+      <div class="search-form__accessory">
+          <i class="lnr lnr-magnifier"></i>
+      </div>
+      <input type="text" class="input" placeholder="Найти...">
+  </form>
+  ```
+
+  ### Big
+
+  ```
+  <form class="search-form search-form--big" action="search.html">
+      <div class="search-form__accessory">
+          <i class="lnr lnr-magnifier"></i> // some icon
+      </div>
+      <input type="text" class="input" placeholder="Find...">
+  </form>
+  ```
+
+.search-form
+  display: inline-block
+  position: relative
+  .search-form__accessory
+    position: absolute
+    top: 7px
+    left: 8px
+  .input
+    padding-left: 30px
+    border-radius: 4px
+    outline: none
+  &--big
+    .input
+      border: 0
+      border-bottom: 2px solid $border-color-dark
+      border-radius: 0
+      font-size: 2.5em
+      padding-left: .1em
+    .search-form__accessory
+      display: none

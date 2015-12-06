@@ -71,450 +71,34 @@ a
   color: desaturate($primary, 30%)
   cursor: pointer
 
-    //vertical-align: middle
+// Atom
+
+@import components/list
+@import components/logo
+@import components/comments
 
 
+// Molecules
+@import components/wrap
+@import components/header
 
-.list
-  display: block
-  margin: 0
-  padding: 0
-  font-size: 14px
+@import components/grid
 
-  &.list--sections
-    +f-serif
-    font-size: 15px
-
-  li, .list__item
-    display: block
-    margin-bottom: 8px
-    //line-height: 30px
-    &.is-active
-      font-weight: bold
-      text-decoration: underline
-    &.is-private
-      opacity: .9
-    &.is-progress
-      font-style: italic
-  &--inline
-    li, .list__item
-      display: inline-block
-      margin-right: 10px
-  &--decimal
-    li, .list__item
-      display: list-item
-      list-style: decimal
-      margin-left: 1.5em
-  &--menu
-    margin-bottom: 0
-    li, .list__item
-      padding: 8px 10px
-      border-width: 1px 0
-      border-style: solid
-      border-color: $border-color
-      margin: -1px 0
-      cursor: pointer
-
-      &:hover
-        background-color: #f9f9f9
-
-      &:active
-        background-color: $border-color
-  &--box
-    li, .list__item
-      margin-bottom: -1px
-      border: 1px solid $border-color
-
-
-
-.main, .wrap
-  //min-height: 100%
-  //display: block
-.container
-  max-width: 1000px
-  margin-left: auto
-  margin-right: auto
-.wrap
-  background-color: #FFF
-  min-height: 100%
-  //margin: 20px 26px 0 20px
-  // overflow: hidden
-  .wrap__content
-    min-height: 100%
-    //background-color: #FFF
-    //border-radius: 3px
-    //box-shadow: 0 7px 20px rgba($black, .3)
-    overflow: hidden
-  .wrap__footer
-    background-color: #f1f1f1
-    border-top: 1px solid $border-color
-
-.header
-  height: 60px
-  display: block
-  border-bottom: 1px solid $border-color
-  //overflow: hidden
-  box-sizing: border-box
-  font-size: 14px
-  //margin-bottom: 10px
-  .header__nav
-    padding-top: 4px
-  .header__in
-    padding: $padding
-  .header__profile
-    float: right
-  .col
-    vertical-align: middle
 .main > .container > .row:first-child > .col
   padding-top: 30px
-
-.logo
-  .logo__img, .logo__text
-    vertical-align: middle
-  .logo__img
-    height: 30px
-    display: inline-block
-  .logo__text
-    display: inline-block
-    font-size: 20px
-    //margin-left: 8px
-    line-height: 30px
-
-
-.profile-nav
-  position: relative
-  cursor: pointer
-  &:hover
-    opacity: .8
-  .profile-nav__text, .profile-nav__img
-    vertical-align: middle
-    display: inline-block
-  .profile-nav__text
-    padding-right: 10px
-
-.footer
-
-  //color: white
 
 .pull-right
   float: right
 .pull-left
   float: left
 
-.row
-  height: 100%
-  min-width: 100%
-  //box-sizing: border-box
-  font-size: 0
+@import components/comments-block
+@import components/section-content
 
-  +clearfix
-  &--full-height
-    & > .col
-      height: 100%
-  &--nowrap
-    white-space: nowrap
-    > .col
-      white-space: normal
-.col
-  position: relative
-  padding: $padding
-  overflow: hidden
-  height: 100%
-  min-height: 100%
-  box-sizing: border-box
-  font-size: $text-size
-  vertical-align: top
-  display: inline-block
+@import components/btn
+@import components/books
+@import components/book
 
-  $class-col: 'col'
-  @for $i from 1 through 12
-    &.#{$class-col}-#{$i}
-      width: 100% * $i / 12
-@keyframes slideInLeft
-  from
-    transform: translateX(-50%)
-    opacity: 0
-  to
-    transform: translateX(0)
-    opacity: 1
-.col
-  &--grey
-    background-color: #f9f9f9
-  .col__close
-    float: right
-    font-size: 24px
-    color: $text-light-color
-    margin-top: 10px
-    cursor: pointer
-    &:hover
-      text-decoration: none
-      color: #333333
-  &--bordered
-    border-right: 1px solid $border-color
-    & + .col
-      border-left: 1px solid $border-color
-      margin-left: -1px
-  &--animate
-    transition: all .25s
-  &--nopadding
-    padding: 0
-  &--sidebar
-    opacity: 0
-    left: -100%
-    &, & + .col
-      transition: left .35s
-    &:not(.is-active)
-      width: 0
-      padding: 0
-    &.is-active
-      opacity: 1
-      left: 0
-      //animation: slideInRight 1s ease-in-out 1s
-
-.comments
-  &.comments_book
-    padding-bottom: 20px
-    .comments__item
-      margin-top: 30px
-      max-width: 500px
-  .comments__form
-    //margin-top: 20px
-    //padding-top: 10px
-    border-top: 1px solid $border-color
-    //border-bottom: 1px solid $border-color
-    padding: 10px 0 0
-  .comments__children
-    //border-left: 2px solid $border-color
-    //padding-left: 10px
-    margin-left: 40px
-    //padding-top: 10px
-  .comments__more
-    margin-bottom: 15px
-    .icon
-      vertical-align: middle
-      margin-right: .3em
-    //color: $
-  .comments__quote-group
-    font-size: 1.3em
-    text-overflow: ellipsis
-    color: $text-light-color
-  &--reader
-    .comments__item
-      margin-bottom: 2em
-
-
-.comments-block
-  +f
-  font-size: 13px
-  line-height: 1.4
-  position: relative
-  width: 100%
-  height: 100%
-  margin-bottom: 10px
-  .comments-block__control
-    float: right
-    font-size: 11px
-    cursor: pointer
-    margin-top: 2px
-
-  .comments-block__header
-    margin-bottom: 5px
-    .comments-block__name
-      color: #333
-      font-weight: normal
-    a
-      display: inline-block
-      vertical-align: middle
-      &.is-active
-        img
-          border: 1px solid #666
-    .comments-block__name
-      margin-left: 10px
-      white-space: nowrap
-      color: $text-light-color
-  .comments-block__name
-    font-weight: bold
-  .comments-block__text
-    text-overflow: ellipsis
-  .comments-block__created-at
-    margin-top: 10px
-    width: 100%
-    font-size: 12px
-    color: $text-light-color
-  &--small
-    .comments-block__header
-      display: inline-block
-      float: left
-    .comments-block__text
-      padding-left: 40px
-  &--big
-    font-size: 1em
-    .comments-block__header
-      margin-bottom: 1em
-    .comments-block__text
-      font-size: 1.1em
-.section-content
-  +f-serif
-  font-size: 17px
-
-  line-height: 25px
-  color: #3b3b3b
-
-  $section-content-comment-width: 16em
-  $section-content-comment-offset: 2em
-
-
-  .section-content__block
-    position: relative
-  .section-content__comment
-    display: none
-    position: absolute
-    left: 100%
-    top: 0
-    max-height: 100%
-    overflow: hidden
-    width: $section-content-comment-width
-    margin-left: $section-content-comment-offset
-
-  &.section-content_show-comments
-    padding-right: $section-content-comment-width + $section-content-comment-offset
-    .section-content__comment
-      display: block
-
-  p, .section-content__block
-    margin-bottom: 1em
-    line-height: 150%
-    & + p, & + .section-content__block
-      margin-top: -1em
-      text-indent: 1.5em
-
-
-
-  h1, h2, h3, h4, h5, h6
-    +f-serif-headers
-    font-weight: normal
-    color: #222
-    line-height: 120%
-  h1
-    font-size: 2em
-  h2
-    font-size: 1.5em
-  h3
-    font-size: 1.17em
-  h4
-    font-size: 1em
-  h5
-    font-size: 0.83em
-  h6
-    font-size: 0.75em
-    //font-weight: bold
-
-.nav
-  list-style: none
-  margin: 0
-  padding: 0
-  &--inline
-    height: 100%
-    .nav__item
-      display: inline-block
-    .nav__item + .nav__item
-      margin-left: 15px
-  &--header
-    display: inline-block
-    margin-right: 30px
-    .nav__item  + .nav__item
-      margin-left: 20px
-  .nav__item
-    &.is-active
-      text-decoration: underline
-      font-weight: bold
-
-.book
-  .book__poster
-    width: 140px
-    height: 200px
-    float: left
-    font-size: 0
-    padding-right: 20px
-    padding-bottom: 30px
-    margin-left: -160px
-    margin-top: 1em
-
-    img
-      width: 100%
-      height: 100%
-  .book__title
-    margin-bottom: 10px
-  .book__info, .book__block
-    margin-bottom: 20px
-  .book__info
-    display: inline-block
-    margin-left: 160px
-
-.btn
-  -webkit-appearance: none
-  background-color: transparent
-  display: inline-block
-  padding: 10px 15px
-  border-radius: 3px
-  border: 1px solid $border-color-dark
-  font-size: 13px
-  font-weight: normal
-  cursor: pointer
-  user-select: none
-  &:focus
-    outline: none
-  &--primary
-    border-radius: 4px
-    background-color: rgba($primary,1)
-    color: white
-    font-weight: 600
-    box-shadow: inset 0 1px 0 rgba(white, .3)
-    border-color: darken($primary, 10%)
-    &:active
-      box-shadow: inset 0 1px 0 rgba(black, .1)
-  &--clear
-    border: none
-    line-height: 1
-    &.is-active
-      color: $primary
-
-  &--icon
-    font-size: 0
-    line-height: 0
-    &:active
-      color: rgba($text-color,.7)
-    > *
-      font-size: $text-size
-      line-height: 20px
-  &--checkbox
-    transition: all .25s ease-out
-    &.is-active
-      background-color: $primary
-      color: white
-
-.books
-  +clearfix
-  white-space: nowrap
-  overflow-x: scroll
-  overflow-y: hidden
-  .books__item
-    +clearfix
-    display: inline-block
-    vertical-align: top
-    width: 100px
-    white-space: normal
-    span
-      display: block
-      max-height: 40px
-      text-overflow: ellipsis
-      overflow: hidden
-      white-space: pre-line
-    img
-      width: 100%
-      height: 140px
-  .books__item + .books__item
-    margin-left: 10px
 .btns-group
   span
     font-size: 12px
@@ -533,6 +117,7 @@ a
   padding: 4px 5px
   border-radius: 12px
   margin-top: 5px
+
 .comment-add
   .comment-add__quote
     font-size: 20px
@@ -556,88 +141,17 @@ a
   box-sizing: border-box
   min-height: 30px
 
-.add-post
-  position: relative
-  .add-post__input
-    & > textarea
-      line-height: 1.4
-      width: 100%
-      display: block
-      appearance: none
-      resize: vertical
-      padding: 20px 15px 10px 60px
-      background-color: transparent
-      box-sizing: border-box
-      border: none
-      height: 60px
-      outline: none
 
+@import components/add-post
+@import components/avatar
 
-  .add-post__wrap
-    line-height: 0
-    background-color: #fff
-    border-radius: 4px
-    overflow: hidden
-    border: 1px solid #ccc
-    margin-bottom: 10px
-  .add-post__controls
-    +clearfix
-    .btn
-      float: right
-  .add-post__user
-    position: absolute
-    top: 10px
-    left: 10px
-.avatar
-  display: inline-block
-  width: 40px
-  height: 40px
-  border-radius: 100%
-  box-sizing: border-box
-  overflow: hidden
-
-  vertical-align: middle
-
-  img
-    height: 100%
-    width: 100%
-  &--small
-    width: 30px
-    height: 30px
-  &--medium
-    width: 60px
-    height: 60px
-  &--big
-    width: 100px
-    height: 100px
-
+// TODO: replace with list
 .feeds
   .feeds__item
     margin-bottom: 20px
 
-.feed
-  +box-style
-  +clearfix
-  .feed__header
-    padding: 10px 15px
-    // margin-bottom: 10px
-    border-bottom: 1px solid #f1f1f1
-  .feed__content
-    padding: 10px 15px
-  .feed__controls
-    border-top: 1px solid #f1f1f1
-    //border-bottom: 1px solid #f1f1f1
 
-  .feed__title
-    a
-      font-weight: bold
-  .feed__author
-    float: left
-    margin: 0 10px 0 0
-  .feed__comments
-    background-color: #f9f9f9
-    padding: 15px 20px
-
+@import components/feed
 
 
 h1, h2, h3, h4, h5, h6
@@ -658,98 +172,12 @@ h1, h2, h3, h4, h5, h6
     top: .5em
     background-color: $green
 
-.reader-header
-  +clearfix
-  .reader-header__menu-icon
-    margin-right: 20px
-  .reader-header__menu-icon, .reader-header__title
-    display: inline-block
 
 
-.sidebar
+@import components/reader-header
+@import components/tooltip
+@import components/comments-form
 
-  .sidebar__in
-    z-index: 1
-    position: fixed
-    top: 0
-    //left: 0
-    width: 320px
-    background-color: #fff
-    height: 100%
-    overflow-y: scroll
-    padding: $padding
-    border-right: 1px solid $border-color
-    box-shadow: 1px 0 3px $border-color
-
-.tooltip-wrap
-  position: relative
-
-  $tooltip-top-offset: 10px
-  &:after
-    content: ''
-    width: 100%
-    height: $tooltip-top-offset
-    display: block
-    position: absolute
-    top: 100%
-
-  &--hover
-    &:hover
-      .tooltip
-        display: block
-    .tooltip
-      display: none
-  .tooltip
-    position: absolute
-    margin-top: $tooltip-top-offset
-    //top: 100%
-    //left: 0px
-    
-.tooltip
-  z-index: 3
-  text-align: left
-  background-color: white
-
-  min-width: 120px
-  +box-style
-  display: inline-block
-  $tooltip-arrow-offset-left: 10px
-
-  &:after
-    content: ''
-    display: block
-    position: absolute
-    left: $tooltip-arrow-offset-left+ 5px
-    top: -8px
-    +arr(10, 8, white, t)
-
-  &:before
-    content: ''
-    display: block
-    position: absolute
-    left: $tooltip-arrow-offset-left+ 4px
-    top: -10px
-    +arr(12, 9, $border-color, t)
-  &--right
-    &:after
-      left: auto
-      right: $tooltip-arrow-offset-left+ 5px
-    &:before
-      left: auto
-      right: $tooltip-arrow-offset-left+ 4px
-
-.comments-form
-  .comments-form__user
-    float: left
-    //display: inline-block
-  .comments-form__input
-    //display: inline-block
-    +clearfix
-    padding-left: 40px
-    width: 100%
-    box-sizing: border-box
-    .input
-      width: 100%
 .input-wrap
   position: relative
   .input-wrap__accessory
@@ -767,89 +195,24 @@ h1, h2, h3, h4, h5, h6
   background: transparent
 
 blockquote
-  //background: #f9f9f9
-  //border-left: 10px solid #ccc
   text-indent: 0
   margin: 1.5em 0
   padding: 0.5em 0
   quotes: "\201C""\201D""\201C""\201D"
   font-style: italic
 
-blockquote:before
-  color: #ccc
-  content: open-quote
-  font-size: 4em
-  line-height: 0.1em
-  margin-right: .1em
-  //margin-left: -.6em
-  vertical-align: -0.4em
-blockquote p
-  display: inline
+  &:before
+    color: #ccc
+    content: open-quote
+    font-size: 4em
+    line-height: 0.1em
+    margin-right: .1em
+    //margin-left: -.6em
+    vertical-align: -0.4em
+  p
+    display: inline
 
-.search-form
-  display: inline-block
-  //width: 200px
-  //width: 100%
-  position: relative
-  .search-form__accessory
-    position: absolute
-    top: 7px
-    left: 8px
-  .input
-    padding-left: 30px
-    border-radius: 4px
-    outline: none
-  &--big
-    .input
-      border: 0
-      border-bottom: 2px solid $border-color-dark
-      border-radius: 0
-      font-size: 2.5em
-      padding-left: .1em
-    .search-form__accessory
-      display: none
-.search
-  .search__form
-    margin-bottom: 30px
-.search-result
-  //+box-style
-  +clearfix
-  //padding: 10px
-  //border: 0
-  .search-result__image
-    float: left
-    margin-right: 1em
-  .search-result__content
-
-.book-info
-  +clearfix
-  $book-info-image-width: 80px
-  $book-info-image-offset: 20px
-  position: relative
-  padding: 20px
-  .book-info__image
-    float: left
-    width: $book-info-image-width
-    img
-      width: 100%
-  .book-info__description
-    font-size: .9em
-    margin: 0
-  .book-info__title
-    margin-bottom: .5em
-  .book-info__content
-    padding-left: $book-info-image-width + $book-info-image-offset
-
-.profile-header
-  +clearfix
-  .profile-header__image, .profile-header__content
-    vertical-align: middle
-  .profile-header__image
-    //float: left
-    display: inline-block
-    margin-right: 20px
-  .profile-header__content
-    display: inline-block
-    vertical-align: middle
-    h2
-      margin-bottom: 10px
+@import components/search
+@import components/search-form
+@import components/book-info
+@import components/profile-header

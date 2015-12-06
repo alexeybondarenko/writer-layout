@@ -1,0 +1,55 @@
+/**
+  # Add post
+
+  Form for adding new post (feed)
+
+  ## Examples
+  ```
+  <div class="add-post">
+      <div class="add-post__wrap">
+          <div class="add-post__user">
+              <div class="avatar">
+                  <img src="images/users/43.jpg" alt="">
+              </div>
+          </div>
+          <div class="add-post__input">
+              <textarea placeholder="What are you thinking about?"></textarea>
+          </div>
+      </div>
+      <div class="add-post__controls">
+          <button class="btn btn--primary">Отправить</button>
+      </div>
+  </div>
+  ```
+
+.add-post
+  position: relative
+  .add-post__input
+    & > textarea
+      line-height: 1.4
+      width: 100%
+      display: block
+      appearance: none
+      resize: vertical
+      padding: 20px 15px 10px 60px
+      background-color: transparent
+      box-sizing: border-box
+      border: none
+      height: 60px
+      outline: none
+
+  .add-post__wrap
+    line-height: 0
+    background-color: #fff
+    border-radius: 4px
+    overflow: hidden
+    border: 1px solid #ccc
+    margin-bottom: 10px
+  .add-post__controls
+    +clearfix
+    .btn
+      float: right
+  .add-post__user
+    position: absolute
+    top: 10px
+    left: 10px

@@ -1,0 +1,49 @@
+/***
+  Comments Form
+  Form to add new comment
+
+  ## Examples
+  ### Compact (with input)
+
+  ```
+  <form class="comments-form">
+      <div class="comments-form__user">
+          <div class="avatar avatar--small">
+              <img src="images/users/43.jpg" alt="User Firstname Lastname">
+          </div>
+      </div>
+      <div class="comments-form__input">
+          <div class="input-wrap">
+              <input type="text" class="input" placeholder="Написать комментарий...">
+              <button type="submit" class="reset input-wrap__accessory">
+                  <i class="lnr lnr-arrow-right-circle"></i>
+              </button>
+          </div>
+      </div>
+  </form>
+  ```
+
+  ### Big (with textarea)
+
+  ```
+  <form class="comments-form">
+      <div class="comments-form__user">
+          <div class="avatar avatar--small">
+              <img src="images/users/43.jpg" alt="User Firstname Lastname">
+          </div>
+      </div>
+      <div class="comments-form__input">
+          <textarea class="textarea" placeholder="Написать комментарий..."></textarea>
+          <div class="btn btn--primary pull-right">Отправить</div>
+      </div>
+  </form>
+  ```
+
+.comments-form
+  .comments-form__user
+    float: left
+  .comments-form__input
+    +clearfix
+    padding-left: 40px
+    width: 100%
+    box-sizing: border-box

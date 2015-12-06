@@ -1,0 +1,58 @@
+/**
+  # Avatar
+
+  Wrap user`s photo
+
+  ## Examples
+
+  ### Basic
+
+  ```
+  <a class="avatar" href="profile.html">
+      <img src="images/users/17.jpg" alt="User 1 profile img"/>
+  </a>
+  ```
+
+  ### Small
+
+  ```
+  <div class="avatar avatar--small">
+      <img src="images/users/17.jpg" alt="User 1 profile img"/>
+  </div>
+  ```
+  ### Medium
+  ```
+  <div class="avatar avatar--medium">
+      <img src="images/users/17.jpg" alt="User 1 profile img"/>
+  </div>
+  ```
+
+  ### Big
+  ```
+  <div class="avatar avatar--big">
+      <img src="images/users/17.jpg" alt="User 1 profile img"/>
+  </div>
+  ```
+
+.avatar
+  display: inline-block
+  width: 40px
+  height: 40px
+  border-radius: 100%
+  box-sizing: border-box
+  overflow: hidden
+
+  vertical-align: middle
+
+  img
+    height: 100%
+    width: 100%
+  &--small
+    width: 30px
+    height: 30px
+  &--medium
+    width: 60px
+    height: 60px
+  &--big
+    width: 100px
+    height: 100px

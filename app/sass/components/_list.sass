@@ -1,0 +1,83 @@
+/***
+  List
+
+  .list--inline - list with inline items
+  .list--nav - navigation list
+  .list--menu - list of menu in left sidebar
+  .list--decimal - list with decimal list style
+  .list--box - list of block elements.
+  .list--sections - list of the sections
+
+  ## Example
+  ### Basic
+
+  ```
+  <ul class="list">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+  </ul>
+  ```
+
+  OR with item class
+
+  ```
+  <div class="list">
+    <div class="list__item"> Item 1 </div>
+    <div class="list__item"> Item 2 </div>
+    <div class="list__item"> Item 3 </div>
+  </div>
+  ```
+.list
+  display: block
+  margin: 0
+  padding: 0
+  font-size: 14px
+
+  $list-item-selectors: 'li, .list__item'
+  #{$list-item-selectors}
+
+    display: block
+    margin-bottom: 8px
+    &.is-active
+      font-weight: bold
+      text-decoration: underline
+    &.is-private
+      opacity: .9
+    &.is-progress
+      font-style: italic
+
+  &--sections
+    +f-serif
+    font-size: 15px
+  &--inline
+    display: inline-block
+    #{$list-item-selectors}
+      display: inline-block
+      margin-right: 10px
+  &--nav
+    padding-top: 4px
+  &--decimal
+    #{$list-item-selectors}
+      display: list-item
+      list-style: decimal
+      margin-left: 1.5em
+  &--menu
+    margin-bottom: 0
+    #{$list-item-selectors}
+      padding: 8px 10px
+      border-width: 1px 0
+      border-style: solid
+      border-color: $border-color
+      margin: -1px 0
+      cursor: pointer
+
+      &:hover
+        background-color: #f9f9f9
+      &:active
+        background-color: $border-color
+
+  &--box
+    #{$list-item-selectors}
+      margin-bottom: -1px
+      border: 1px solid $border-color

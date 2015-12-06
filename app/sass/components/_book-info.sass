@@ -1,0 +1,38 @@
+/***
+  Book Info
+  Block with information of the book
+  Example:
+
+  <div class="book-info">
+      <a href="book-info.html" class="book-info__image">
+          <img src="images/books/book-1.png" alt="Book name" />
+      </a>
+      <div class="book-info__content">
+          <h2 class="book-info__title">
+              <a href="book-info.html">
+                  Самонаблюдение, иcходя из того, что однократно. в процессе
+              </a>
+          </h2>
+          <div class="book-info__description"><a href="users/12">Д.Майерс. 2015</a></div>
+          <p>Предсознательное, например, отталкивает закон, следовательно основной закон психофизики: ощущение изменяется пропорционально логарифму раздражителя . Но так как книга Фридмана адресована руководителям и работникам образования, то есть идентификация начинает комплекс.</p>
+      </div>
+  </div>
+
+.book-info
+  +clearfix
+  $book-info-image-width: 80px
+  $book-info-image-offset: 20px
+  position: relative
+  padding: 20px
+  .book-info__image
+    float: left
+    width: $book-info-image-width
+    img
+      width: 100%
+  .book-info__description
+    font-size: .9em
+    margin: 0
+  .book-info__title
+    margin-bottom: .5em
+  .book-info__content
+    padding-left: $book-info-image-width + $book-info-image-offset

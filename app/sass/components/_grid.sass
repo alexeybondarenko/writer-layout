@@ -1,0 +1,67 @@
+.container
+  max-width: 1000px
+  margin-left: auto
+  margin-right: auto
+
+.row
+  height: 100%
+  min-width: 100%
+  font-size: 0
+
+  +clearfix
+  &--full-height
+    & > .col
+      height: 100%
+  &--nowrap
+    white-space: nowrap
+    > .col
+      white-space: normal
+.col
+  position: relative
+  padding: $padding
+  overflow: hidden
+  height: 100%
+  min-height: 100%
+  box-sizing: border-box
+  font-size: $text-size
+  vertical-align: top
+  display: inline-block
+
+  $class-col: 'col'
+  @for $i from 1 through 12
+    &.#{$class-col}-#{$i}
+      width: 100% * $i / 12
+
+.col__close
+  float: right
+  font-size: 24px
+  color: $text-light-color
+  margin-top: 10px
+  cursor: pointer
+  &:hover
+    text-decoration: none
+    color: #333333
+
+.col
+  &--grey
+    background-color: #f9f9f9
+  &--bordered
+    border-right: 1px solid $border-color
+    & + .col
+      border-left: 1px solid $border-color
+      margin-left: -1px
+  &--animate
+    transition: all .25s
+  &--nopadding
+    padding: 0
+  &--sidebar
+    opacity: 0
+    left: -100%
+    &, & + .col
+      transition: left .35s
+    &:not(.is-active)
+      width: 0
+      padding: 0
+    &.is-active
+      opacity: 1
+      left: 0

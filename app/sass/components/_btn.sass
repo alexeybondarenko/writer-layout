@@ -1,0 +1,87 @@
+/**
+  # Btn
+
+  Button component
+
+  - btn--primary - button with primary style. Using to accent the main action on the page
+  - btn--clear - button without border color
+  - btn--icon - has special properties for alignment icon elements inside button
+  - btn--checkbox - has background color if state is `.is-active`
+
+  ## Examples
+
+  ### Basic
+
+  ```
+  <a href="comment-add.html" class="btn">Добавить комментарий</a>
+  ```
+
+  ### Primary button
+
+  ```
+  <button class="btn btn--primary">Купить подписку</button>
+  ```
+
+  ### Icon
+
+  ```
+  <a class="btn btn--icon">
+      <i class="icon lnr lnr-menu"></i>
+  </a>
+  ```
+
+  ### Checkbox
+  ```
+  <a href="book-reader.html" class="btn btn--checkbox is-active">
+      Menu
+  </a>
+  ```
+
+  ### Icon + Checkbox
+  ```
+  <a href="book-reader.html" class="reader-header__menu-icon btn btn--icon btn--checkbox is-active">
+      <i class="icon lnr lnr-menu"></i>
+  </a>
+  ```
+
+.btn
+  -webkit-appearance: none
+  background-color: transparent
+  display: inline-block
+  padding: 10px 15px
+  border-radius: 3px
+  border: 1px solid $border-color-dark
+  font-size: 13px
+  font-weight: normal
+  cursor: pointer
+  user-select: none
+  &:focus
+    outline: none
+  &--primary
+    border-radius: 4px
+    background-color: rgba($primary,1)
+    color: white
+    font-weight: 600
+    box-shadow: inset 0 1px 0 rgba(white, .3)
+    border-color: darken($primary, 10%)
+    &:active
+      box-shadow: inset 0 1px 0 rgba(black, .1)
+  &--clear
+    border: none
+    line-height: 1
+    &.is-active
+      color: $primary
+
+  &--icon
+    font-size: 0
+    line-height: 0
+    &:active
+      color: rgba($text-color,.7)
+    > *
+      font-size: $text-size
+      line-height: 20px
+  &--checkbox
+    transition: all .25s ease-out
+    &.is-active
+      background-color: $primary
+      color: white
