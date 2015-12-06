@@ -36,7 +36,7 @@
   +clearfix
 
   $list-item-selectors: 'li, .list__item'
-  #{$list-item-selectors}
+  & > #{$list-item-selectors}
 
     display: block
     margin-bottom: 8px
@@ -54,19 +54,19 @@
     font-size: 15px
   &--inline
     display: inline-block
-    #{$list-item-selectors}
+    & > #{$list-item-selectors}
       display: inline-block
       margin-right: 10px
   &--nav
     padding-top: 4px
   &--decimal
-    #{$list-item-selectors}
+    & > #{$list-item-selectors}
       display: list-item
       list-style: decimal
       margin-left: 1.5em
   &--menu
     margin-bottom: 0
-    #{$list-item-selectors}
+    & > #{$list-item-selectors}
       padding: 8px 10px
       border-width: 1px 0
       border-style: solid
@@ -80,18 +80,18 @@
         background-color: $border-color
 
   &--box
-    #{$list-item-selectors}
+    & > #{$list-item-selectors}
       margin-bottom: -1px
       border: 1px solid $border-color
   &--blocks
-    #{$list-item-selectors}
+    & > #{$list-item-selectors}
       margin-bottom: 20px
 
   &--scroll
     white-space: nowrap
     overflow-x: scroll
     overflow-y: hidden
-    #{$list-item-selectors}
+    & > #{$list-item-selectors}
       display: inline-block
       vertical-align: top
       width: 100px
