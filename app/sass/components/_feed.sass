@@ -124,16 +124,19 @@
       </div>
   </div>
 
+$feed-border-color: #f1f1f1 !default
+$feed-comments-background: #f9f9f9 !default
+
 .feed
   +box-style
   +clearfix
   .feed__header
     padding: 10px 15px
-    border-bottom: 1px solid #f1f1f1
+    border-bottom: 1px solid $feed-border-color
   .feed__content
     padding: 10px 15px
   .feed__controls
-    border-top: 1px solid #f1f1f1
+    border-top: 1px solid $feed-border-color
 
   .feed__title
     a
@@ -142,7 +145,7 @@
     float: left
     margin: 0 10px 0 0
   .feed__comments
-    background-color: #f9f9f9
+    background-color: $feed-comments-background
     padding: 15px 20px
   .feed__comments-form
     border-top: 1px solid $border-color
