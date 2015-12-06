@@ -45,7 +45,7 @@ gulp.task('templates', function() {
 gulp.task('sass', function() {
     return gulp.src(src.sass)
         .pipe(sass({
-            sourceComments: true
+            sourceComments: false
         }))
         .pipe(gulp.dest(src.css))
         .pipe(reload({stream: true}));
