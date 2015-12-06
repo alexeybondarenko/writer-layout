@@ -35,24 +35,30 @@
         </button>
     </div>
     <div class="feed__comments">
-        <div class="comments">
+        <div class="list list--block">
+            <div class="list__item">
             {% include "comments-block--small.html" %}
-            <div class="comments__children">
-                <div class="comments">
+                <div class="list list--block list__children">
                     {% include "comments-block--small.html" %}
                     {% include "comments-block--small.html" %}
                 </div>
             </div>
-            {% include "comments-block--small.html" %}
-            {% include "comments-block--small.html" %}
-            <div class="comments__children">
-                <div class="comments">
+            <div class="list__item">
+                {% include "comments-block--small.html" %}
+            </div>
+            <div class="list__item">
+                {% include "comments-block--small.html" %}
+            </div>
+
+            <div class="list__item">
+                {% include "comments-block--small.html" %}
+                <div class="list list--block list__children">
                     {% include "comments-block--small.html" %}
                 </div>
             </div>
-            <div class="comments__form">
-                {% include "comments-form.html" %}
-            </div>
+        </div>
+        <div class="feed__comments-form">
+            {% include "comments-form.html" %}
         </div>
     </div>
 </div>

@@ -33,6 +33,7 @@
   margin: 0
   padding: 0
   font-size: 14px
+  +clearfix
 
   $list-item-selectors: 'li, .list__item'
   #{$list-item-selectors}
@@ -46,7 +47,8 @@
       opacity: .9
     &.is-progress
       font-style: italic
-
+  .list__children
+    margin-left: 40px
   &--sections
     +f-serif
     font-size: 15px
@@ -84,3 +86,14 @@
   &--blocks
     #{$list-item-selectors}
       margin-bottom: 20px
+
+  &--scroll
+    white-space: nowrap
+    overflow-x: scroll
+    overflow-y: hidden
+    #{$list-item-selectors}
+      display: inline-block
+      vertical-align: top
+      width: 100px
+      margin: 0 10px 0 0
+      white-space: normal

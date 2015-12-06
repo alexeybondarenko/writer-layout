@@ -35,15 +35,16 @@
         </button>
     </div>
     <div class="feed__comments">
-        <div class="comments">
-            {% include "comments-block--small.html" %}
-            {% include "comments-block--small.html" %}
-            <div class="comments__more">
-                <i class="icon lnr lnr-plus-circle"></i> <a class="link">еще 25 комментариев</a>
+        <div class="list list--block">
+            <div class="list__item">
+                {% include "comments-block--small.html" %}
             </div>
-            <div class="comments__form">
-                {% include "comments-form.html" %}
+            <div class="list__item">
+                <a class="link">еще 25 комментариев</a>
             </div>
+        </div>
+        <div class="feed__comments-form">
+            {% include "comments-form.html" %}
         </div>
     </div>
 </div>
