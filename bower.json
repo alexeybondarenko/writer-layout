@@ -17,6 +17,10 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "normalize.css#~3.0.3",
+    "magnific-popup": "~1.0.0"
+  },
+  "devDependencies": {
+    "fancybox": "~2.1.5"
   }
 }

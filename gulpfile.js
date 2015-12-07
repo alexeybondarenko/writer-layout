@@ -16,6 +16,7 @@ var src = {
     sass: 'app/sass/**/*.{sass, scss}',
     css:  'dist/css',
     html: 'app/html/**/*.html',
+    js: 'app/scripts/**/*.js',
     bower: 'app/bower_components/**/*'
 };
 
@@ -28,6 +29,7 @@ gulp.task('serve', ['sass'], function() {
 
     gulp.watch(src.sass, ['sass']);
     gulp.watch(src.html, ['templates']);
+    gulp.watch(src.js, ['scripts']);
 });
 
 // Swig templates
@@ -38,7 +40,10 @@ gulp.task('templates', function() {
         }))
         .pipe(gulp.dest('./dist', {mode: '0777'}))
         .on('end', reload);
-
+});
+gulp.task('scripts', function () {
+    return gulp.src(src.js, {base: 'app'})
+        .pipe(gulp.dest('dist'))
 });
 
 // Compile sass into CSS
