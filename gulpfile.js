@@ -4,7 +4,7 @@ var sass        = require('gulp-sass');
 var swig        = require('gulp-swig');
 var reload      = browserSync.reload;
 var del = require('del');
-var vinylPaths = require('vinyl-paths');
+var vinylPaths = require('  l-paths');
 
 var runSequence = require('run-sequence');
 
@@ -85,7 +85,7 @@ gulp.task('styleguide', ['build'], function() {
 });
 
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['build'], function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
