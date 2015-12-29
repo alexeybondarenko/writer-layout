@@ -11,6 +11,7 @@ var runSequence = require('run-sequence');
 var styleguidejs = require('gulp-styleguidejs'),
     styleguide = require('sc5-styleguide');
 
+var ghPages = require('gulp-gh-pages');
 
 var src = {
     sass: 'app/sass/**/*.{sass, scss}',
@@ -83,5 +84,10 @@ gulp.task('styleguide', ['build'], function() {
         .pipe(gulp.dest('docs'));
 });
 
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 gulp.task('default', ['build', 'serve']);
