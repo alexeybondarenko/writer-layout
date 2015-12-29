@@ -1,0 +1,1649 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+.hide {
+  display: none !important; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.reset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  background: transparent; }
+
+.small {
+  font-size: .9em; }
+
+.big {
+  font-size: 1.2em;
+  line-height: 1.4; }
+
+html, body {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 160%;
+  min-width: 900px;
+  background-color: #540c14;
+  color: #333; }
+
+body, input, button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1em; }
+
+blockquote {
+  text-indent: 0;
+  margin: 1.5em 0;
+  padding: 0.5em 0;
+  quotes: "“" "”" "“" "”";
+  font-style: italic;
+  font-size: 1.3em;
+  text-overflow: ellipsis;
+  color: #666; }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: .1em;
+    vertical-align: -0.4em; }
+  blockquote p {
+    display: inline; }
+
+.link {
+  color: #2f6ab4;
+  cursor: pointer; }
+
+.input {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  min-height: 30px; }
+
+.textarea {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  resize: none; }
+
+/**
+  # Btn
+
+  Button component
+
+  - btn--primary - button with primary style. Using to accent the main action on the page
+  - btn--clear - button without border color
+  - btn--icon - has special properties for alignment icon elements inside button
+  - btn--checkbox - has background color if state is `.is-active`
+
+  ## Examples
+
+  ### Basic
+
+  ```
+  <a href="comment-add.html" class="btn">Добавить комментарий</a>
+  ```
+
+  ### Primary button
+
+  ```
+  <button class="btn btn--primary">Купить подписку</button>
+  ```
+
+  ### Icon
+
+  ```
+  <a class="btn btn--icon">
+      <i class="icon lnr lnr-menu"></i>
+  </a>
+  ```
+
+  ### Checkbox
+  ```
+  <a href="book-reader.html" class="btn btn--checkbox is-active">
+      Menu
+  </a>
+  ```
+
+  ### Icon + Checkbox
+  ```
+  <a href="book-reader.html" class="reader-header__menu-icon btn btn--icon btn--checkbox is-active">
+      <i class="icon lnr lnr-menu"></i>
+  </a>
+  ``` */
+.btn {
+  -webkit-appearance: none;
+  background-color: transparent;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid #666;
+  font-size: 13px;
+  font-weight: normal;
+  cursor: pointer;
+  user-select: none; }
+  .btn:focus {
+    outline: none; }
+  .btn--primary {
+    border-radius: 4px;
+    background-color: #0d66d6;
+    color: white;
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-color: #0a4fa6; }
+    .btn--primary:active {
+      box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1); }
+  .btn--clear {
+    border: none;
+    line-height: 1; }
+    .btn--clear.is-active {
+      color: #0D66D6; }
+  .btn--icon {
+    font-size: 0;
+    line-height: 0; }
+    .btn--icon:active {
+      color: rgba(51, 51, 51, 0.7); }
+    .btn--icon > * {
+      font-size: 13px;
+      line-height: 20px; }
+  .btn--checkbox {
+    transition: all .25s ease-out; }
+    .btn--checkbox.is-active {
+      background-color: #0D66D6;
+      color: white; }
+
+/**
+  # Avatar
+
+  Wrap user`s photo
+
+  ## Examples
+
+  ### Basic
+
+  ```
+  <a class="avatar" href="profile.html">
+      <img src="images/users/17.jpg" alt="User 1 profile img"/>
+  </a>
+  ```
+
+  ### Small
+
+  ```
+  <div class="avatar avatar--small">
+      <img src="images/users/17.jpg" alt="User 1 profile img"/>
+  </div>
+  ```
+  ### Medium
+  ```
+  <div class="avatar avatar--medium">
+      <img src="images/users/17.jpg" alt="User 1 profile img"/>
+  </div>
+  ```
+
+  ### Big
+  ```
+  <div class="avatar avatar--big">
+      <img src="images/users/17.jpg" alt="User 1 profile img"/>
+  </div>
+  ``` */
+.avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  vertical-align: middle; }
+  .avatar img {
+    height: 100%;
+    width: 100%; }
+  .avatar--small {
+    width: 30px;
+    height: 30px; }
+  .avatar--medium {
+    width: 60px;
+    height: 60px; }
+  .avatar--big {
+    width: 100px;
+    height: 100px; }
+
+/**
+  Badge
+
+  Small block with rounded background, that is used like icon for additional information, for block, where it'is placed.
+
+  ## Example
+
+  ### Basic
+
+  ```
+  <h1>
+      Самонаблюдение, иcходя из того, что однократно.
+      <span class="badge">в процессе</span>
+  </h1>
+  ``` */
+.badge {
+  font-size: 11px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  background: #e3e3e3;
+  color: #333;
+  padding: 4px 5px;
+  border-radius: 12px;
+  margin-top: 5px; }
+
+/***
+  Tooltip
+
+  Tooltip block. It show additional actions.
+
+  ## Examples
+
+  .tooltip-wrap class must be added to the container of tooltip for position calculation.
+
+  ### Static
+
+  <div class="tooltip-wrap">
+      <div class="tooltip tooltip--right" style="position: absolute; right: 10px; top: 0">
+          <div class="list list--menu">
+              <a class="list__item" href="profile.html">Profile</a>
+              <a class="list__item">Subscriptions</a>
+              <a class="list__item">
+                  <b>Logout</b>
+              </a>
+          </ul>
+      </div>
+  </div>
+
+  ### Hover
+  <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+      <i class="lnr lnr-exit-up"></i>&nbsp;
+      Share
+      <div class="tooltip">
+          <ul class="list list--menu">
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Email</li>
+          </ul>
+      </div>
+  </button> */
+.tooltip {
+  z-index: 3;
+  text-align: left;
+  background-color: white;
+  min-width: 120px;
+  background-color: white;
+  border: 1px solid rgba(204, 204, 204, 0.9);
+  box-shadow: 0 1px 1px rgba(204, 204, 204, 0.4);
+  border-radius: 3px;
+  display: inline-block; }
+  .tooltip:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: -8px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent white transparent; }
+  .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: -10px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 6px 9px 6px;
+    border-color: transparent transparent #e3e3e3 transparent; }
+  .tooltip--right:after {
+    left: auto;
+    right: 15px; }
+  .tooltip--right:before {
+    left: auto;
+    right: 14px; }
+
+.tooltip-wrap {
+  position: relative; }
+  .tooltip-wrap:after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 100%; }
+  .tooltip-wrap--hover:hover .tooltip {
+    display: block; }
+  .tooltip-wrap--hover .tooltip {
+    display: none; }
+  .tooltip-wrap .tooltip {
+    position: absolute;
+    margin-top: 10px; }
+
+/***
+  List
+
+  .list--inline - list with inline items
+  .list--nav - navigation list
+  .list--menu - list of menu in left sidebar
+  .list--decimal - list with decimal list style
+  .list--box - list of block elements.
+  .list--sections - list of the sections
+
+  ## Example
+  ### Basic
+
+  ```
+  <ul class="list">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+  </ul>
+  ```
+
+  OR with item class
+
+  ```
+  <div class="list">
+    <div class="list__item"> Item 1 </div>
+    <div class="list__item"> Item 2 </div>
+    <div class="list__item"> Item 3 </div>
+  </div>
+  ``` */
+.list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 14px; }
+  .list:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .list > li, .list .list__item {
+    display: block;
+    margin-bottom: 8px; }
+    .list > li.is-active, .list .list__item.is-active {
+      font-weight: bold;
+      text-decoration: underline; }
+    .list > li.is-private, .list .list__item.is-private {
+      opacity: .9; }
+    .list > li.is-progress, .list .list__item.is-progress {
+      font-style: italic; }
+  .list .list__children {
+    margin-left: 40px; }
+  .list--sections {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    text-rendering: optimizeLegibility;
+    font-size: 15px; }
+  .list--inline {
+    display: inline-block; }
+    .list--inline > li, .list--inline .list__item {
+      display: inline-block;
+      margin-right: 10px; }
+  .list--nav {
+    padding-top: 4px; }
+  .list--decimal > li, .list--decimal .list__item {
+    display: list-item;
+    list-style: decimal;
+    margin-left: 1.5em; }
+  .list--menu {
+    margin-bottom: 0; }
+    .list--menu > li, .list--menu .list__item {
+      padding: 8px 10px;
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: #e3e3e3;
+      margin: -1px 0;
+      cursor: pointer; }
+      .list--menu > li:hover, .list--menu .list__item:hover {
+        background-color: #f9f9f9; }
+      .list--menu > li:active, .list--menu .list__item:active {
+        background-color: #e3e3e3; }
+  .list--box > li, .list--box .list__item {
+    margin-bottom: -1px;
+    border: 1px solid #e3e3e3; }
+  .list--blocks > li, .list--blocks .list__item {
+    margin-bottom: 20px; }
+  .list--scroll {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden; }
+    .list--scroll > li, .list--scroll .list__item {
+      display: inline-block;
+      vertical-align: top;
+      width: 100px;
+      margin: 0 10px 0 0;
+      white-space: normal; }
+  .list--50 {
+    font-size: 0; }
+    .list--50 > li, .list--50 .list__item {
+      display: inline-block;
+      width: 50%;
+      font-size: 13px; }
+
+.logo .logo__img, .logo .logo__text {
+  vertical-align: middle; }
+
+.logo .logo__img {
+  height: 30px;
+  display: inline-block; }
+
+.logo .logo__text {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 30px; }
+
+/***
+  Book
+
+  ## Examples
+  ```
+  <div class="book">
+      <div class="book__info">
+          <div class="book__poster">
+              <img src="images/placeholder.png" alt=""/>
+          </div>
+          <h1 class="book__title">Самонаблюдение, иcходя из того, что однократно.</h1>
+      </div>
+      <div class="book__block">
+          Some aditional information about the book
+      </div>
+      <div class="book__block">
+          <h3>Другие книги автора (<a href="#/author/1">Д.Майерс</a>)</h3>
+      </div>
+      <div class="book__block">
+          <h3>Читатели также выбирают</h3>
+          {% include "./books.html" %}
+      </div>
+  </div>
+  ``` */
+.book .book__poster {
+  width: 140px;
+  height: 200px;
+  float: left;
+  font-size: 0;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  margin-left: -160px;
+  margin-top: 1em; }
+  .book .book__poster img {
+    width: 100%;
+    height: 100%; }
+
+.book .book__title {
+  margin-bottom: 10px; }
+
+.book .book__info, .book .book__block {
+  margin-bottom: 20px; }
+
+.book .book__info {
+  display: inline-block;
+  margin-left: 160px; }
+
+.book--small {
+  display: inline-block; }
+  .book--small .book__poster {
+    width: 100px;
+    height: 140px;
+    float: none;
+    margin: 0;
+    padding: 0; }
+  .book--small .book__title {
+    display: block;
+    max-height: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre-line;
+    font-size: .9em;
+    margin: 0; }
+
+/***
+  Is Online
+
+  State that add to the block green circle on the left side
+
+  ## Examples
+
+  ### Single element
+  ```
+  <a href="profile.html" class="is-online">Анатолий Вассерман</a>
+  ```
+
+  ### List
+  ```
+  <ul class="list">
+      <li><a href="profile.html" class="is-online">Анатолий Вассерман</a></li>
+      <li><a href="profile.html">Борис Акунин</a></li>
+  </ul>
+  ``` */
+.is-online {
+  display: inline-block;
+  position: relative; }
+  .is-online:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    left: -1em;
+    top: .5em;
+    background-color: mediumseagreen; }
+
+/***
+  # Feed
+
+  Element with feed from user.
+  ## Examples
+
+  ### Basic
+  <div class="feed">
+      <div class="feed__header">
+          <div class="feed__author">
+              <a class="avatar" href="profile.html">
+                  <img src="images/users/17.jpg" alt="User 1 profile img"/>
+              </a>
+          </div>
+          <div class="feed__title">
+              <a href="profile.html"><b>Lilya New</b></a> <span>poested new comment in book <a href="book-info.html">New History of Julie</a></span>
+          </div>
+          <div>
+              <span>2 hours ago</span>
+          </div>
+      </div>
+      <div class="feed__content">
+          Some text that expire
+      </div>
+      <div class="feed__controls">
+          <button class="btn btn--clear">
+              <i class="lnr lnr-thumbs-up"></i>&nbsp;
+              Like
+          </button>
+          <button class="btn btn--clear">
+              <i class="lnr lnr-bubble"></i>&nbsp;
+              Comments
+          </button>
+          <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+              <i class="lnr lnr-exit-up"></i>&nbsp;
+              Share
+              <div class="tooltip">
+                  <ul class="list list--menu">
+                      <li>Facebook</li>
+                      <li>Twitter</li>
+                      <li>Email</li>
+                  </ul>
+              </div>
+          </button>
+      </div>
+  </div>
+
+  ### Book
+
+  <div class="feed feed--book">
+      <div class="feed__header">
+          <div class="feed__title">
+              <b>Рекомендации</b>
+              <a href="#" class="pull-right">
+                  <i class="lnr lnr-cross "></i>
+              </a>
+          </div>
+      </div>
+      <div class="feed__content">
+          {% include "./books.html" %}
+      </div>
+  </div>
+
+  ### Comments
+
+  <div class="feed">
+      <div class="feed__header">
+          <div class="feed__author">
+              <a class="avatar" href="profile.html">
+                  <img src="images/users/20.jpg" alt="User 1 profile img"/>
+              </a>
+          </div>
+          <div class="feed__title">
+              <a href="profile.html"><b>John Smith</b></a> <span>poested new comment in book <a href="book-info.html">Laugh-Out-Loud Jokes for Kids</a></span>
+          </div>
+          <div>
+              <span>2 hours ago</span>
+          </div>
+      </div>
+      <div class="feed__content">
+          Some text that expire and very long long long ...
+      </div>
+      <div class="feed__controls">
+          <button class="btn btn--clear">
+              <i class="lnr lnr-thumbs-up"></i>&nbsp;
+              Like
+          </button>
+          <button class="btn btn--clear is-active">
+              <i class="lnr lnr-bubble"></i>&nbsp;
+              Comments
+          </button>
+          <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+              <i class="lnr lnr-exit-up"></i>&nbsp;
+              Share
+              <div class="tooltip">
+                  <ul class="list list--menu">
+                      <li>Facebook</li>
+                      <li>Twitter</li>
+                      <li>Email</li>
+                  </ul>
+              </div>
+          </button>
+      </div>
+      <div class="feed__comments">
+          <div class="comments">
+              {% include "comments-block--small.html" %}
+              <div class="comments__children">
+                  <div class="comments">
+                      {% include "comments-block--small.html" %}
+                      {% include "comments-block--small.html" %}
+                  </div>
+              </div>
+              {% include "comments-block--small.html" %}
+              {% include "comments-block--small.html" %}
+              <div class="comments__children">
+                  <div class="comments">
+                      {% include "comments-block--small.html" %}
+                  </div>
+              </div>
+              <div class="comments__form">
+                  {% include "comments-form.html" %}
+              </div>
+          </div>
+      </div>
+  </div> */
+.feed {
+  background-color: white;
+  border: 1px solid rgba(204, 204, 204, 0.9);
+  box-shadow: 0 1px 1px rgba(204, 204, 204, 0.4);
+  border-radius: 3px; }
+  .feed:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .feed .feed__header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f1f1; }
+  .feed .feed__content {
+    padding: 10px 15px; }
+  .feed .feed__controls {
+    border-top: 1px solid #f1f1f1; }
+  .feed .feed__title a {
+    font-weight: bold; }
+  .feed .feed__author {
+    float: left;
+    margin: 0 10px 0 0; }
+  .feed .feed__comments {
+    background-color: #f9f9f9;
+    padding: 15px 20px; }
+  .feed .feed__comments-form {
+    border-top: 1px solid #e3e3e3;
+    padding: 10px 0 0; }
+
+.wrap {
+  background-color: #FFF;
+  min-height: 100%; }
+  .wrap .wrap__content {
+    min-height: 100%;
+    overflow: hidden; }
+  .wrap .wrap__footer {
+    background-color: #f1f1f1;
+    border-top: 1px solid #e3e3e3; }
+
+/**
+  Header block */
+.header {
+  height: 60px;
+  display: block;
+  border-bottom: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  font-size: 14px; }
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.row {
+  height: 100%;
+  min-width: 100%;
+  font-size: 0; }
+  .row:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row--full-height > .col {
+    height: 100%; }
+  .row--nowrap {
+    white-space: nowrap; }
+    .row--nowrap > .col {
+      white-space: normal; }
+
+.col {
+  position: relative;
+  padding: 15px 15px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  font-size: 13px;
+  vertical-align: top;
+  display: inline-block; }
+  .col.col-1 {
+    width: 8.33333%; }
+  .col.col-2 {
+    width: 16.66667%; }
+  .col.col-3 {
+    width: 25%; }
+  .col.col-4 {
+    width: 33.33333%; }
+  .col.col-5 {
+    width: 41.66667%; }
+  .col.col-6 {
+    width: 50%; }
+  .col.col-7 {
+    width: 58.33333%; }
+  .col.col-8 {
+    width: 66.66667%; }
+  .col.col-9 {
+    width: 75%; }
+  .col.col-10 {
+    width: 83.33333%; }
+  .col.col-11 {
+    width: 91.66667%; }
+  .col.col-12 {
+    width: 100%; }
+
+.col__close {
+  float: right;
+  font-size: 24px;
+  color: #666;
+  margin-top: 10px;
+  cursor: pointer; }
+  .col__close:hover {
+    text-decoration: none;
+    color: #333333; }
+
+.col--grey {
+  background-color: #f9f9f9; }
+
+.col--bordered {
+  border-right: 1px solid #e3e3e3; }
+  .col--bordered + .col {
+    border-left: 1px solid #e3e3e3;
+    margin-left: -1px; }
+
+.col--animate {
+  transition: all .25s; }
+
+.col--nopadding {
+  padding: 0; }
+
+.col--sidebar {
+  opacity: 0;
+  left: -100%; }
+  .col--sidebar, .col--sidebar + .col {
+    transition: left .35s; }
+  .col--sidebar:not(.is-active) {
+    width: 0;
+    padding: 0; }
+  .col--sidebar.is-active {
+    opacity: 1;
+    left: 0; }
+
+.main > .container > .row:first-child > .col {
+  padding-top: 30px; }
+
+/**
+  Comments Block
+
+  ## Examples
+
+  ### Basic
+
+  ```
+  <div class="comments-block">
+    <div class="comments-block__header">
+        <a href="#/user/1" title="User 1 profile" class="is-active avatar avatar--small">
+            <img src="images/users/17.jpg" alt="User 1 profile img"/>
+        </a>
+        <a href="#/user/1" title="User 1 profile" class="avatar avatar--small">
+            <img src="images/users/20.jpg" alt="User 1 profile img"/>
+        </a>
+        <a href="#/user/1" title="User 1 profile" class="avatar avatar--small">
+            <img src="images/users/43.jpg" alt="User 1 profile img"/>
+        </a>
+        <span>и еще 14 человек</span>
+    </div>
+    <div class="comments-block__text">
+        Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст.
+        <!--<a href="" class="link">подробнее...</a>-->
+    </div>
+    <div class="comments-block__created-at">
+        12/23/15 14:23:23
+    </div>
+  </div>
+  ```
+
+  ### Small
+
+  ```
+  <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+  </div>
+  ``` */
+.comments-block {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px; }
+  .comments-block .comments-block__control {
+    float: right;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 2px; }
+  .comments-block .comments-block__header {
+    margin-bottom: 5px; }
+    .comments-block .comments-block__header .comments-block__name {
+      color: #333;
+      font-weight: normal; }
+    .comments-block .comments-block__header a {
+      display: inline-block;
+      vertical-align: middle; }
+      .comments-block .comments-block__header a.is-active img {
+        border: 1px solid #666; }
+    .comments-block .comments-block__header .comments-block__name {
+      margin-left: 10px;
+      white-space: nowrap;
+      color: #666; }
+  .comments-block .comments-block__name {
+    font-weight: bold; }
+  .comments-block .comments-block__text {
+    text-overflow: ellipsis; }
+  .comments-block .comments-block__created-at {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 12px;
+    color: #666; }
+  .comments-block--small .comments-block__header {
+    display: inline-block;
+    float: left; }
+  .comments-block--small .comments-block__text {
+    padding-left: 40px; }
+  .comments-block--big {
+    font-size: 1em; }
+    .comments-block--big .comments-block__header {
+      margin-bottom: 1em; }
+    .comments-block--big .comments-block__text {
+      font-size: 1.1em; }
+
+/**
+ Section Content
+
+ Block with content of the section. It has specific typography for comfortable reading
+
+ Basically section content includes blocks of contents/paragraphs. These separating is used for connecting text and comments.
+
+ ## Example
+
+ ### Basic
+ ```
+ <div class="section-content">
+    <div class="section-content__block" data-section-id="1">
+        Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возникает с ситуации
+        несоответствия желаемого и действительного, поэтому лидерство дает закон. Проекция просветляет
+        импульс. Самонаблюдение, иcходя из того, что однократно. Наши исследования позволяют сделать вывод
+        о том, что аномия осознаёт комплекс. Предсознательное начинает бихевиоризм в силу которого смешивает
+        субъективное и объективное, переносит свои внутренние побуждения на реальные связи вещей.
+    </div>
+  </div>
+  ```
+  ## With comments
+
+  ```
+  <div class="section-content__block">
+    Самонаблюдение фундаментально аннигилирует объект. Самость отражает конформизм.
+    Бессознательное зеркально отталкивает импульс. Структурный голод столь же важен для жизни, как и
+    коллективное бессознательное непоследовательно отталкивает возрастной комплекс.
+
+    <div class="section-content__comment"> */
+.section-content {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  text-rendering: optimizeLegibility;
+  font-size: 17px;
+  line-height: 25px;
+  color: #3b3b3b; }
+  .section-content .section-content__block {
+    position: relative; }
+  .section-content .section-content__comment {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    max-height: 100%;
+    overflow: hidden;
+    width: 16em;
+    margin-left: 2em; }
+  .section-content.section-content_show-comments {
+    padding-right: 18em; }
+    .section-content.section-content_show-comments .section-content__comment {
+      display: block; }
+  .section-content p, .section-content .section-content__block {
+    margin-bottom: 1em;
+    line-height: 150%; }
+    .section-content p + p, .section-content p + .section-content__block, .section-content .section-content__block + p, .section-content .section-content__block + .section-content__block {
+      margin-top: -1em;
+      text-indent: 1.5em; }
+  .section-content h1, .section-content h2, .section-content h3, .section-content h4, .section-content h5, .section-content h6 {
+    font-family: 'Helvetica Neue', Geneva, Helvetica;
+    font-weight: 200;
+    font-weight: normal;
+    color: #222;
+    line-height: 120%; }
+  .section-content h1 {
+    font-size: 2em; }
+  .section-content h2 {
+    font-size: 1.5em; }
+  .section-content h3 {
+    font-size: 1.17em; }
+  .section-content h4 {
+    font-size: 1em; }
+  .section-content h5 {
+    font-size: 0.83em; }
+  .section-content h6 {
+    font-size: 0.75em; }
+
+/**
+  # Add post
+
+  Form for adding new post (feed)
+
+  ## Examples
+  ```
+  <div class="add-post">
+      <div class="add-post__wrap">
+          <div class="add-post__user">
+              <div class="avatar">
+                  <img src="images/users/43.jpg" alt="">
+              </div>
+          </div>
+          <div class="add-post__input">
+              <textarea placeholder="What are you thinking about?"></textarea>
+          </div>
+      </div>
+      <div class="add-post__controls">
+          <button class="btn btn--primary">Отправить</button>
+      </div>
+  </div>
+  ``` */
+.add-post {
+  position: relative; }
+  .add-post .add-post__input > textarea {
+    line-height: 1.4;
+    width: 100%;
+    display: block;
+    appearance: none;
+    resize: vertical;
+    padding: 20px 15px 10px 60px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    height: 60px;
+    outline: none; }
+  .add-post .add-post__wrap {
+    line-height: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    margin-bottom: 10px; }
+  .add-post .add-post__controls:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .add-post .add-post__controls .btn {
+    float: right; }
+  .add-post .add-post__user {
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+
+/**
+  # Reader Header
+
+  Header of the reader. It has buttons for navigation between section
+
+  ## Examples
+  <div class="reader-header">
+      <a href="book-reader.html" class="reader-header__menu-icon btn btn--icon btn--checkbox is-active">
+          <i class="icon lnr lnr-menu"></i>
+      </a>
+      <h2 class="reader-header__title">
+          <a href="./book-info.html">Филосовский филогенез</a>
+      </h2>
+  </div> */
+.reader-header:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.reader-header .reader-header__menu-icon {
+  margin-right: 20px; }
+
+.reader-header .reader-header__menu-icon, .reader-header .reader-header__title {
+  display: inline-block; }
+
+/***
+  Input Wrap
+
+  Input wrap block group input with accessory block on the right side
+
+  ## Example
+
+  ```
+  <div class="input-wrap">
+      <input type="text" class="input" placeholder="Написать комментарий...">
+      <button type="submit" class="reset input-wrap__accessory">
+          <i class="lnr lnr-arrow-right-circle"></i>
+      </button>
+  </div>
+  ``` */
+.input-wrap {
+  position: relative; }
+  .input-wrap .input-wrap__accessory {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    font-size: 16px;
+    color: #666; }
+
+/***
+  Search Form
+  Search form field.
+
+  ## Example
+
+  ### Compact
+  ```
+  <form class="search-form" action="search.html">
+      <div class="search-form__accessory">
+          <i class="lnr lnr-magnifier"></i>
+      </div>
+      <input type="text" class="input" placeholder="Найти...">
+  </form>
+  ```
+
+  ### Big
+
+  ```
+  <form class="search-form search-form--big" action="search.html">
+      <div class="search-form__accessory">
+          <i class="lnr lnr-magnifier"></i> // some icon
+      </div>
+      <input type="text" class="input" placeholder="Find...">
+  </form>
+  ``` */
+.search-form {
+  display: inline-block;
+  position: relative; }
+  .search-form .search-form__accessory {
+    position: absolute;
+    top: 7px;
+    left: 8px; }
+  .search-form .input {
+    padding-left: 30px;
+    border-radius: 4px;
+    outline: none; }
+  .search-form--big .input {
+    border: 0;
+    border-bottom: 2px solid #666;
+    border-radius: 0;
+    font-size: 2.5em;
+    padding-left: .1em; }
+  .search-form--big .search-form__accessory {
+    display: none; }
+
+/***
+  Comments Form
+  Form to add new comment
+
+  ## Examples
+  ### Compact (with input)
+
+  ```
+  <form class="comments-form">
+      <div class="comments-form__user">
+          <div class="avatar avatar--small">
+              <img src="images/users/43.jpg" alt="User Firstname Lastname">
+          </div>
+      </div>
+      <div class="comments-form__input">
+          <div class="input-wrap">
+              <input type="text" class="input" placeholder="Написать комментарий...">
+              <button type="submit" class="reset input-wrap__accessory">
+                  <i class="lnr lnr-arrow-right-circle"></i>
+              </button>
+          </div>
+      </div>
+  </form>
+  ```
+
+  ### Big (with textarea)
+
+  ```
+  <form class="comments-form">
+      <div class="comments-form__user">
+          <div class="avatar avatar--small">
+              <img src="images/users/43.jpg" alt="User Firstname Lastname">
+          </div>
+      </div>
+      <div class="comments-form__input">
+          <textarea class="textarea" placeholder="Написать комментарий..."></textarea>
+          <div class="btn btn--primary pull-right">Отправить</div>
+      </div>
+  </form>
+  ``` */
+.comments-form .comments-form__user {
+  float: left; }
+
+.comments-form .comments-form__input {
+  padding-left: 40px;
+  width: 100%;
+  box-sizing: border-box; }
+  .comments-form .comments-form__input:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+/***
+  Book Info
+  Block with information of the book
+  Example:
+
+  <div class="book-info">
+      <a href="book-info.html" class="book-info__image">
+          <img src="images/books/book-1.png" alt="Book name" />
+      </a>
+      <div class="book-info__content">
+          <h2 class="book-info__title">
+              <a href="book-info.html">
+                  Самонаблюдение, иcходя из того, что однократно. в процессе
+              </a>
+          </h2>
+          <div class="book-info__description"><a href="users/12">Д.Майерс. 2015</a></div>
+          <p>Предсознательное, например, отталкивает закон, следовательно основной закон психофизики: ощущение изменяется пропорционально логарифму раздражителя . Но так как книга Фридмана адресована руководителям и работникам образования, то есть идентификация начинает комплекс.</p>
+      </div>
+  </div> */
+.book-info {
+  position: relative;
+  padding: 20px; }
+  .book-info:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .book-info .book-info__image {
+    float: left;
+    width: 80px; }
+    .book-info .book-info__image img {
+      width: 100%; }
+  .book-info .book-info__description {
+    font-size: .9em;
+    margin: 0; }
+  .book-info .book-info__title {
+    margin-bottom: .5em; }
+  .book-info .book-info__content {
+    padding-left: 100px; }
+
+/***
+
+  Profile Header
+  Is Using to presend panel with avatar, name and some additional information, like date of creation
+  Example:
+
+  <div class="profile-header">
+      <div class="profile-header__image">
+          <img src="images/users/43.jpg" alt="">
+      </div>
+      <div class="profile-header__content">
+          <h2>Виктор Пелевин</h2>
+          <div>
+              <ul class="list list--inline">
+                  <li>16 подписчиков</li>
+                  <li>76 подписок</li>
+              </ul>
+          </div>
+      </div>
+  </div> */
+.profile-header:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.profile-header .profile-header__image, .profile-header .profile-header__content {
+  vertical-align: middle; }
+
+.profile-header .profile-header__image {
+  display: inline-block;
+  margin-right: 20px; }
+
+.profile-header .profile-header__content {
+  display: inline-block; }
+  .profile-header .profile-header__content h2 {
+    margin-bottom: 10px; }
+
+.profile-header--nav .profile-header__image {
+  margin-left: 20px;
+  margin-right: 0; }
+
+.block {
+  padding-top: 20px;
+  font-size: 13px; }
+
+.progress {
+  display: inline-block;
+  width: 100%;
+  background-color: #e3e3e3;
+  overflow: hidden;
+  border-radius: 2px;
+  height: 2px; }
+  .progress .progress__in {
+    background-color: #0D66D6;
+    height: 2px; }

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Writer.io - open book write tool</title>
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css"/>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/app.css"/>
+
+</head>
+<body>
+<div class="wrap">
+	<div class="wrap__content">
+	    <header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col col-2">
+                <a href="feeds.html" class="logo">
+                    <span class="logo__text">
+                        <b>Writer.io</b>
+                    </span>
+                </a>
+            </div>
+            <div class="col col-7">
+                <ul class="list list--inline list--nav">
+                    <li>
+                        <a href="news.html">Новинки</a>
+                    </li>
+                </ul>
+                <form class="search-form" action="search.html">
+    <div class="search-form__accessory">
+        <i class="lnr lnr-magnifier"></i>
+    </div>
+    <input type="text" class="input" placeholder="Найти...">
+</form>
+            </div>
+            <div class="col col-3">
+                <div class="profile-header profile-header--nav pull-right">
+                    <div class="profile-header__content">
+                        Виктор Пелевин
+                    </div>
+                    <span class="profile-header__image avatar avatar--small">
+                        <img src="images/users/43.jpg" alt="Ivan Ivanov profile avatar" class="profile-nav__img"/>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="tooltip-wrap">
+            <div class="tooltip tooltip--right" style="position: absolute; right: 10px; top: 0">
+                <div class="list list--menu">
+                    <a class="list__item" href="profile.html">Profile</a>
+                    <a class="list__item">Subscriptions</a>
+                    <a class="list__item">
+                        <b>Logout</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="main">
+            <div class="container">
+	            
+<div class="row row--full-height">
+    <div class="col col-2 col--menu">
+        <h4><a href="#/favorites">Favorites</a></h4>
+        <ul class="list">
+            <li><a href="profile.html" class="is-online">Анатолий Вассерман</a></li>
+            <li><a href="profile.html">Борис Акунин</a></li>
+        </ul>
+        <h4>My books</h4>
+        <ul class="list">
+            <li><a href="book-info.html">First 100 Words</a></li>
+            <li><a href="book-info.html">Diary of a Wimpy Kid #10: Old School</a></li>
+            <li><a href="book-info.html">Laugh-Out-Loud Jokes for Kids</a></li>
+            <li><a href="book-info.html">Secret Garden: An Inky Treasure Hunt...</a></li>
+        </ul>
+    </div>
+    <div class="col col-7">
+        <div class="list list--blocks">
+            <div class="list__item">
+                <div class="add-post">
+                    <div class="add-post__wrap">
+                        <div class="add-post__user">
+                            <div class="avatar">
+                                <img src="images/users/43.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="add-post__input">
+                            <textarea placeholder="What are you thinking about?"></textarea>
+                        </div>
+                    </div>
+                    <div class="add-post__controls">
+                        <button class="btn btn--primary">Отправить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list__item">
+                <div class="feed">
+    <div class="feed__header">
+        <div class="feed__author">
+            <a class="avatar" href="profile.html">
+                <img src="images/users/17.jpg" alt="User 1 profile img"/>
+            </a>
+        </div>
+        <div class="feed__title">
+            <a href="profile.html"><b>Lilya New</b></a> <span>poested new comment in book <a href="book-info.html">New History of Julie</a></span>
+            <span class="small">2&nbsp;hours&nbsp;ago</span>
+        </div>
+    </div>
+    <div class="feed__content">
+        Some text that expire
+    </div>
+    <div class="feed__controls">
+        <button class="btn btn--clear">
+            <i class="lnr lnr-thumbs-up"></i>&nbsp;
+            Like
+        </button>
+        <button class="btn btn--clear">
+            <i class="lnr lnr-bubble"></i>&nbsp;
+            Comments
+        </button>
+        <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+            <i class="lnr lnr-exit-up"></i>&nbsp;
+            Share
+            <div class="tooltip">
+                <ul class="list list--menu">
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Email</li>
+                </ul>
+            </div>
+        </button>
+    </div>
+</div>
+            </div>
+            <div class="list__item">
+                <div class="feed">
+    <div class="feed__header">
+        <div class="feed__author">
+            <a class="avatar" href="profile.html">
+                <img src="images/users/20.jpg" alt="User 1 profile img"/>
+            </a>
+        </div>
+        <div class="feed__title">
+            <a href="profile.html"><b>John Smith</b></a> <span>poested new comment in book <a href="book-info.html">Laugh-Out-Loud Jokes for Kids</a></span>
+            <span class="small">2 hours ago</span>
+        </div>
+    </div>
+    <div class="feed__content">
+        Some text that expire and very long long long ...
+    </div>
+    <div class="feed__controls">
+        <button class="btn btn--clear">
+            <i class="lnr lnr-thumbs-up"></i>&nbsp;
+            Like
+        </button>
+        <button class="btn btn--clear is-active">
+            <i class="lnr lnr-bubble"></i>&nbsp;
+            Comments
+        </button>
+        <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+            <i class="lnr lnr-exit-up"></i>&nbsp;
+            Share
+            <div class="tooltip">
+                <ul class="list list--menu">
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Email</li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    <div class="feed__comments">
+        <div class="list list--block">
+            <div class="list__item">
+            <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+</div>
+                <div class="list list--block list__children">
+                    <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+</div>
+                    <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="list__item">
+                <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+</div>
+            </div>
+            <div class="list__item">
+                <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+</div>
+            </div>
+
+            <div class="list__item">
+                <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+</div>
+                <div class="list list--block list__children">
+                    <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="feed__comments-form">
+            <form class="comments-form">
+    <div class="comments-form__user">
+        <div class="avatar avatar--small">
+            <img src="images/users/43.jpg" alt="User Firstname Lastname">
+        </div>
+    </div>
+    <div class="comments-form__input">
+        <div class="input-wrap">
+            <input type="text" class="input" placeholder="Написать комментарий...">
+            <button type="submit" class="reset input-wrap__accessory">
+                <i class="lnr lnr-arrow-right-circle"></i>
+            </button>
+        </div>
+    </div>
+</form>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="list__item">
+                <div class="feed feed--book">
+    <div class="feed__header">
+        <div class="feed__title">
+            <b>Рекомендации</b>
+            <a href="#" class="pull-right">
+                <i class="lnr lnr-cross "></i>
+            </a>
+        </div>
+    </div>
+    <div class="feed__content">
+        <div class="list list--scroll">
+    <div class="list__item">
+        <a class="book book--small" href="book-info.html#/book/1">
+    <img class="book__poster" src="images/placeholder.png" alt="Book 1"/>
+    <div class="book__title">Обьективное - невероятное</div>
+</a>
+    </div>
+    <div class="list__item">
+        <a class="book book--small" href="book-info.html#/book/2">
+            <img class="book__poster" src="images/placeholder.png" alt="Book 2"/>
+            <div class="book__title">Давно забытая загадка инков</div>
+        </a>
+    </div>
+    <div class="list__item">
+        <a class="book book--small" href="book-info.html#/book/3">
+            <img class="book__poster" src="images/placeholder.png" alt="Book 3"/>
+            <div class="book__title">Кот и тапок гуся</div>
+        </a>
+    </div>
+    <div class="list__item">
+        <a class="book book--small" href="book-info.html#/book/3">
+            <img class="book__poster" src="images/placeholder.png" alt="Book 3"/>
+            <div class="book__title">Кот и тапок гуся</div>
+        </a>
+    </div>
+</div>
+    </div>
+</div>
+            </div>
+            <div class="list__item">
+                <div class="feed">
+    <div class="feed__header">
+        <div class="feed__author">
+            <a class="avatar" href="profile.html">
+                <img src="images/users/20.jpg" alt="User 1 profile img"/>
+            </a>
+        </div>
+        <div class="feed__title">
+            <a  href="profile.html"><b>John Smith</b></a> poested new comment in book <a href="book-info.html">Laugh-Out-Loud Jokes for Kids</a>
+            <span class="small">2 hours ago</span>
+        </div>
+    </div>
+    <div class="feed__content">
+        Some text that expire and very long long long ...
+    </div>
+    <div class="feed__controls">
+        <button class="btn btn--clear">
+            <i class="lnr lnr-thumbs-up"></i>&nbsp;
+            Like
+        </button>
+        <button class="btn btn--clear is-active">
+            <i class="lnr lnr-bubble"></i>&nbsp;
+            Comments
+        </button>
+        <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+            <i class="lnr lnr-exit-up"></i>&nbsp;
+            Share
+            <div class="tooltip">
+                <ul class="list list--menu">
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Email</li>
+                </ul>
+            </div>
+        </button>
+    </div>
+    <div class="feed__comments">
+        <div class="list list--block">
+            <div class="list__item">
+                <div class="comments-block comments-block--small">
+    <i class="comments-block__control">
+        <i class="lnr lnr-cross "></i>
+    </i>
+    <div class="comments-block__header">
+        <a href="" class="avatar avatar--small"><img src="images/users/53.jpg" alt=""/></a>
+    </div>
+    <div class="comments-block__text">
+        <a href="" class="link comments-block__name">Виктория Иванова</a> Придерживаясь жестких принципов социального Дарвинизма, роль отчуждает контраст. Конформность последовательно выбирает психоанализ.
+    </div>
+</div>
+            </div>
+            <div class="list__item">
+                <a class="link">еще 25 комментариев</a>
+            </div>
+        </div>
+        <div class="feed__comments-form">
+            <form class="comments-form">
+    <div class="comments-form__user">
+        <div class="avatar avatar--small">
+            <img src="images/users/43.jpg" alt="User Firstname Lastname">
+        </div>
+    </div>
+    <div class="comments-form__input">
+        <div class="input-wrap">
+            <input type="text" class="input" placeholder="Написать комментарий...">
+            <button type="submit" class="reset input-wrap__accessory">
+                <i class="lnr lnr-arrow-right-circle"></i>
+            </button>
+        </div>
+    </div>
+</form>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="list__item">
+                <div class="feed">
+    <div class="feed__header">
+        <div class="feed__author">
+            <a class="avatar" href="profile.html">
+                <img src="images/users/17.jpg" alt="User 1 profile img"/>
+            </a>
+        </div>
+        <div class="feed__title">
+            <a href="profile.html"><b>Lilya New</b></a> <span>poested new comment in book <a href="book-info.html">New History of Julie</a></span>
+            <span class="small">2&nbsp;hours&nbsp;ago</span>
+        </div>
+    </div>
+    <div class="feed__content">
+        Some text that expire
+    </div>
+    <div class="feed__controls">
+        <button class="btn btn--clear">
+            <i class="lnr lnr-thumbs-up"></i>&nbsp;
+            Like
+        </button>
+        <button class="btn btn--clear">
+            <i class="lnr lnr-bubble"></i>&nbsp;
+            Comments
+        </button>
+        <button class="btn btn--clear tooltip-wrap tooltip-wrap--hover">
+            <i class="lnr lnr-exit-up"></i>&nbsp;
+            Share
+            <div class="tooltip">
+                <ul class="list list--menu">
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Email</li>
+                </ul>
+            </div>
+        </button>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="col col-3">
+        <!--<h2>Новое для вас</h2>-->
+        <!--<div class="list list--scroll">
+    <div class="list__item">
+        <a class="book book--small" href="book-info.html#/book/1">
+    <img class="book__poster" src="images/placeholder.png" alt="Book 1"/>
+    <div class="book__title">Обьективное - невероятное</div>
+</a>
+    </div>
+    <div class="list__item">
+        <a class="book book--small" href="book-info.html#/book/2">
+            <img class="book__poster" src="images/placeholder.png" alt="Book 2"/>
+            <div class="book__title">Давно забытая загадка инков</div>
+        </a>
+    </div>
+    <div class="list__item">
+        <a class="book book--small" href="book-info.html#/book/3">
+            <img class="book__poster" src="images/placeholder.png" alt="Book 3"/>
+            <div class="book__title">Кот и тапок гуся</div>
+        </a>
+    </div>
+    <div class="list__item">
+        <a class="book book--small" href="book-info.html#/book/3">
+            <img class="book__poster" src="images/placeholder.png" alt="Book 3"/>
+            <div class="book__title">Кот и тапок гуся</div>
+        </a>
+    </div>
+</div>-->
+    </div>
+</div>
+
+            </div>
+        </main>
+    </div>
+    <div class="wrap__footer">
+        <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12">
+                Writer.io © All right reserved. 2015
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
