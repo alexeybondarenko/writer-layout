@@ -4,7 +4,6 @@ var sass        = require('gulp-sass');
 var swig        = require('gulp-swig');
 var reload      = browserSync.reload;
 var del = require('del');
-var vinylPaths = require('  l-paths');
 
 var runSequence = require('run-sequence');
 
