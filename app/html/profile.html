@@ -23,12 +23,18 @@
 </div>
 <div class="row">
     <div class="col col-12">
-        <h2>Любимые книги</h2>
-        {% include "partitial/books.html" %}
-    </div>
-    <div class="col col-12">
-        <h2>Ваши книги</h2>
-        {% include "partitial/books.html" %}
+        <h2>Читаемые книги</h2>
+        <div class="list list--blocks">
+            <div class="list__item">
+                {% include "partitial/books.html" %}
+            </div>
+            <div class="list__item">
+                {% include "partitial/books.html" %}
+            </div>
+            <div class="list__item">
+                {% include "partitial/books.html" %}
+            </div>
+        </div>
     </div>
 </div>
 
